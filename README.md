@@ -36,15 +36,15 @@ Surface Plane
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  (https://www.coolblue.nl/?srsltid=AfmBOooAHHubpE1eM-n5ZM1Yrux6Agc--VE_P5lBBzRFRaBoOiy_pf5U)
+  https://www.aceandtate.com/nl
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Homepagina  
-  <img src="readme-images/pagina1.png.jpg" width="375px" alt="omschrijving van de pagina">
+  Pagina 1  
+  <img src="readme-images/pagina1.png" width="375px" alt="pagina 1 screenshot">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Overzichtspagina  
-  <img src="readme-images/pagina2.png" width="375px" alt="omschrijving van de pagina">
+  Pagina 2
+  <img src="readme-images/pagina2.png" width="375px" alt="pagina 2 screenshot">
  
 </details>
 
