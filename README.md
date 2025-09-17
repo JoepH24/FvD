@@ -68,7 +68,7 @@ Surface Plane
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina's: 
-  <img src="readme-images/breakdownschets.png" width="375px" alt="breakdown van de hele pagina">
+  <img src="/readme-images/breakdownschets.png" width="375px" alt="breakdown van de hele pagina">
 
  
 </details>
