@@ -3,68 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ace & Tate — Brillen en zonnebrillen</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/homepagina.css">  
+  <title>Ace & Tate</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/homepagina.css">
+  <link rel="stylesheet" href="css/hamburger.css">
+
+  <script src="js/header.js" defer></script>
 </head>
 <body>
+
+
+
   <header>
-    <section>
-      <p>Gratis verzending op alle brillen</p>
+    <!-- Promo bar -->
+    <p class="promo-bar">
+      <a href="#">Koop een multifocale bril, krijg tweede montuur gratis</a>
+    </p>
+
+    <!-- Hoofdheader -->
+    <section class="main-header">
+      <!-- Hamburgermenu knop -->
+      <button class="menu-toggle" aria-label="Open menu">
+        <img src="svg/hamburgermenu.svg" alt="Menu">
+      </button>
+
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <img src="svg/logoheader.svg" alt="Ace & Tate logo">
+      </a>
+
+      <!-- Navigatie links -->
+      <nav class="nav-left" aria-label="Hoofdmenu links">
+        <ul>
+          <li><a href="#">Brillen</a></li>
+          <li><a href="#">Zonnebrillen</a></li>
+          <li><a href="#">Accessoires</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Oogzorg</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigatie rechts -->
+      <nav class="nav-right" aria-label="Hoofdmenu rechts">
+        <ul>
+          <li><a href="#">Gratis oogmeting</a></li>
+          <li><a href="#">Winkels</a></li>
+          <li><a href="#">Inloggen</a></li>
+          <li><a href="#"><img src="svg/vergrootglas.svg" alt="Zoeken"></a></li>
+          <li><a href="#"><img src="svg/hartje.svg" alt="Wishlist"></a></li>
+          <li><a href="#"><img src="svg/winkeltas.svg" alt="Winkelmandje"></a></li>
+        </ul>
+      </nav>
+
+      <!-- Icons mobiel -->
+      <ul class="header-icons">
+        <li><a href="#"><img src="svg/vergrootglas.svg" alt="Zoeken"></a></li>
+        <li><a href="#"><img src="svg/hartje.svg" alt="Wishlist"></a></li>
+        <li><a href="#"><img src="svg/account.svg" alt="Account"></a></li>
+        <li><a href="#"><img src="svg/winkeltas.svg" alt="Winkelmandje"></a></li>
+      </ul>
     </section>
 
-    <nav aria-label="Hoofdmenu">
-      <a href="index.html">ace & tate</a>
-
-      <details>
-        <summary>Menu</summary>
-        <ul>
-          <li><a href="#brillen">Brillen</a></li>
-          <li><a href="#zonnebrillen">Zonnebrillen</a></li>
-          <li><a href="#services">Oogmeting</a></li>
-        </ul>
-      </details>
-
+    <!-- Quick nav -->
+    <nav class="quick-nav" aria-label="Snelle navigatie">
       <ul>
-        <li><a href="#brillen">Brillen</a></li>
-        <li><a href="#zonnebrillen">Zonnebrillen</a></li>
-        <li><a href="#services">Oogmeting</a></li>
-      </ul>
-
-      <ul>
-        <li><a href="#"><img src="#" alt=""></a></li>
-        <li><a href="#"><img src="#" alt=""></a></li>
-        <li><a href="#"><img src="#" alt=""></a></li>
-        <li><a href="#"><img src="#" alt=""></a></li>
+        <li><a href="#">Brillen</a></li>
+        <li><a href="#">Zonnebrillen</a></li>
+        <li><a href="#">Winkels</a></li>
       </ul>
     </nav>
   </header>
 
+
+  <!-- Hamburgermenu -->
+  <nav class="main-nav" aria-label="Uitklapmenu">
+    <button class="close-menu" aria-label="Sluit menu">&times;</button>
+
+    <ul class="menu-top">
+      <li><a href="#">Brillen</a></li>
+      <li><a href="#">Zonnebrillen</a></li>
+      <li><a href="#">Accessoires</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="#">Oogzorg</a></li>
+    </ul>
+
+    <ul class="menu-bottom">
+      <li><a href="#">Gratis oogmeting</a></li>
+      <li><a href="#">Winkels</a></li>
+      <li><a href="#">Mijn account</a></li>
+      <li><a href="#">Contact opnemen</a></li>
+    </ul>
+
+    <a href="/" class="menu-logo">
+      <img src="svg/hamburgermenulogo.svg" alt="& logo">
+    </a>
+  </nav>
+
+
+
+
   <main>
+    <!-- Hero -->
     <section>
-      <h2>We’re serious about eyewear</h2>
-      <a href="#" role="button">Shop collectie</a>
-      <a href="#" role="button">Ontdek meer</a>
+      <h1>We’re serious about eyewear</h1>
+      <a href="#">Shop collectie</a>
+      <a href="#">Ontdek meer</a>
     </section>
 
+    <!-- Promo -->
     <section>
       <article>
         <h2>Tijdelijke Bundel Aanbieding</h2>
         <p>Bespaar nu 50% op elke extra bril.</p>
-        <a href="#" role="button">Ontdek bundel aanbieding</a>
+        <a href="#">Ontdek bundel aanbieding</a>
       </article>
+    
       <article>
-        <a href="#" role="button">Boek een oogmeting</a>
+        <a href="#">Boek een oogmeting</a>
       </article>
     </section>
+    
+    
 
+    <!-- Nieuw -->
     <section>
       <h2>Nieuw</h2>
       <hr>
       <ul>
         <li>
           <figure>
-            <img src="/afbeeldingen/paloma-medium-tigerwood-flat.jpg" alt="Paloma bril">
+            <img src="afbeeldingen/paloma-medium-tigerwood-flat.jpg" alt="Paloma bril">
             <figcaption>Paloma €135</figcaption>
           </figure>
         </li>
@@ -89,74 +158,189 @@
       </ul>
     </section>
 
+
+
+
+    <!-- Shop categorieën -->
+<!-- Shop categorieën -->
+<section>
+  <ul>
+    <li>
+      <figure>
+        <img src="afbeeldingen/vrouwbril2.png" alt="Shop brillen">
+        <a href="#">Shop brillen</a>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img src="afbeeldingen/manbril.png" alt="Shop zonnebrillen">
+        <a href="#">Shop zonnebrillen</a>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img src="afbeeldingen/bril5.jpg" alt="Shop blauw licht filter">
+        <a href="#">Shop blauw licht filter</a>
+      </figure>
+    </li>
+  </ul>
+</section>
+
+
+
+
+    <!-- Bestsellers -->
     <section>
-      <h2>Shop brillen</h2>
-      <a href="#" role="button">Shop brillen</a>
+      <h2>Bestsellers</h2>
+      <hr>
+      <ul>
+        <li>
+          <figure>
+            <img src="afbeeldingen/bril1.png" alt="Neil Large">
+            <figcaption>
+              <strong>Neil Large</strong><br>
+              <small>Satin Gold</small>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="afbeeldingen/bril2.jpeg" alt="Lily">
+            <figcaption>
+              <strong>Lily</strong><br>
+              <small>Fizz</small>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="afbeeldingen/roth-fizz-flat_1.jpeg" alt="Roth">
+            <figcaption>
+              <strong>Roth</strong><br>
+              <small>Tigerwood</small>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="afbeeldingen/bril6.png" alt="Alfred">
+            <figcaption>
+              <strong>Alfred</strong><br>
+              <small>Botanical Haze</small>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="afbeeldingen/bril8.jpeg" alt="Monty">
+            <figcaption>
+              <strong>Monty</strong><br>
+              <small>Fizz</small>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
     </section>
 
-    <section>
-      <h2>Shop zonnebrillen</h2>
-      <a href="#" role="button">Shop zonnebrillen</a>
-    </section>
 
-    <section>
-      <h2>Vind een winkel</h2>
-      <p>Kom langs voor een gratis oogmeting of pas je favoriete montuur.</p>
-      <a href="#" role="button">Vind een winkel</a>
-    </section>
 
+    <!-- Extra call-to-actions -->
+<section>
+  <article>
+    <a href="#">Shop zonnebrillen op sterkte</a>
+  </article>
+  <article>
+    <a href="#">Vind een winkel</a>
+  </article>
+</section>
+
+
+
+
+    <!-- Nieuwsbrief -->
     <section>
-      <h2>Meld je aan voor onze nieuwsbrief</h2>
+      <h2>Meld je aan voor onze nieuwsbrief voor de laatste Ace & Tate updates.</h2>
+    
       <form>
         <label for="email">E-mailadres</label>
-        <input type="email" id="email" name="email" placeholder="jouw@email.com">
-        <button type="submit">Meld je aan</button>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    
+        <fieldset>
+          <legend>Toestemming</legend>
+          <input type="checkbox" id="consent" required>
+          <label for="consent">
+            Ik geef toestemming voor de verwerking van mijn persoonlijke gegevens en heb het
+            <a href="#">privacybeleid</a> gelezen *
+          </label>
+        </fieldset>
+    
+        <input type="submit" value="Meld je aan">
       </form>
     </section>
+    
   </main>
 
+
+  
   <footer>
-    <p>We staan voor je klaar</p>
-    <p>Ma - Vr, 9:00 - 17:00</p>
-    <p>+31 97010240634</p>
-
-    <nav>
-      <ul>
-        <li><a href="#brillen">Brillen</a></li>
-        <li><a href="#zonnebrillen">Zonnebrillen</a></li>
-        <li><a href="#accessoires">Accessoires</a></li>
-        <li><a href="#producten">Producten</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#leveringsopties">Leveringsopties</a></li>
-        <li><a href="#contact">Contact opnemen</a></li>
-        <li><a href="#overons">Over ons</a></li>
-        <li><a href="#verantwoordelijkheid">Verantwoordelijkheid</a></li>
-        <li><a href="#vacatures">Vacatures</a></li>
-        <li><a href="#opticiens">Opticiens</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-        <li><a href="#bedrijven">Voor bedrijven</a></li>
-        <li><a href="#studenten">Voor studenten</a></li>
-      </ul>
-    </nav>
-
-    <nav>
-      <ul>
-        <li><a href="#nederland">Nederland</a></li>
-        <li><a href="#dutch">Dutch</a></li>
-      </ul>
-    </nav>
-
-    <nav>
-      <ul>
-        <li><a href="#toegankelijkheid">Toegankelijkheid</a></li>
-        <li><a href="#cookiebeleid">Cookiebeleid</a></li>
-        <li><a href="#colofon">Colofon</a></li>
-        <li><a href="#privacybeleid">Privacybeleid</a></li>
-        <li><a href="#algemenevoorwaarden">Algemene voorwaarden</a></li>
-        <li><a href="#websitevoorwaarden">Website voorwaarden</a></li>
-        <li><a href="#compliance">Compliance</a></li>
-      </ul>
-    </nav>
+    <!-- Serviceblok -->
+    <section>
+      <h3>We staan voor je klaar</h3>
+      <p>Ma – Vr, 9:00 – 17:00</p>
+      <p>
+        <img src="svg/whatsapp.svg" alt="WhatsApp"> +31 97010240634
+      </p>
+  
+      <nav aria-label="Hoofdmenu footer">
+        <ul>
+          <li><a href="#">Brillen</a></li>
+          <li><a href="#">Zonnebrillen</a></li>
+          <li><a href="#">Accessoires</a></li>
+          <li><a href="#">Producten</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Leveringsopties</a></li>
+          <li><a href="#">Contact opnemen</a></li>
+          <li><a href="#">Over ons</a></li>
+          <li><a href="#">Verantwoordelijkheid</a></li>
+          <li><a href="#">Vacatures</a></li>
+          <li><a href="#">Opticiens</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Voor bedrijven</a></li>
+          <li><a href="#">Voor studenten</a></li>
+        </ul>
+      </nav>
+    </section>
+  
+    <!-- Meta-informatie -->
+    <section>
+      <aside>
+        <img src="afbeeldingen/blogo.svg" alt="Certified B Corporation logo">
+  
+        <ul>
+          <li><a href="#">Toegankelijkheid</a></li>
+          <li><a href="#">Cookiebeleid</a></li>
+          <li><a href="#">Colofon</a></li>
+          <li><a href="#">Privacybeleid</a></li>
+          <li><a href="#">Algemene voorwaarden</a></li>
+          <li><a href="#">Website voorwaarden</a></li>
+          <li><a href="#">Compliance</a></li>
+        </ul>
+  
+        <address>
+          <p>
+            <img src="svg/locatie.svg" alt="Locatie">
+            <a href="#">Nederland</a> <a href="#">Dutch</a>
+          </p>
+        </address>
+      </aside>
+  
+      <figure>
+        <img src="afbeeldingen/logo.svg" alt="Ace & Tate logo">
+      </figure>
+    </section>
   </footer>
+  
+  
+
 </body>
 </html>

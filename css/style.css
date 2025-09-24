@@ -1,3 +1,6 @@
+/* -------------------------------
+   Fonts
+---------------------------------*/
 @font-face {
   font-family: "AceTate";
   src: url("../fonts/AmperSans-Light.woff2") format("woff2");
@@ -26,49 +29,115 @@
   font-style: normal;
 }
 
+/* -------------------------------
+   Root variabelen
+---------------------------------*/
+:root {
+  /* Kleuren */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-light-gray: #f0f0f0;
+  --color-off-white: #fefefe;
+  --color-text: #000000;
 
+  /* Buttons */
+  --color-button-bg: #ffffff;
+  --color-button-text: #000000;
+
+  /* Fonts */
+  --font-base: "AceTate", Arial, sans-serif;
+  --font-serif: "ArizonaSerif", serif;
+}
+
+/* -------------------------------
+   Reset
+---------------------------------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* -------------------------------
+   Basis typografie
+---------------------------------*/
 body {
-  font-family: "AceTate", Arial, sans-serif;
+  font-family: var(--font-base);
   font-weight: 400;
   line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-white);
+  overflow-x: hidden;
 }
 
-
 h1 {
-  font-family: "AceTate", sans-serif;
-  font-weight: 500; 
+  font-family: var(--font-base);
+  font-weight: 500; /* medium */
 }
 
 h2 {
-  font-family: "AceTate", sans-serif;
-  font-weight: 400; 
+  font-family: var(--font-base);
+  font-weight: 400; /* regular */
 }
 
-h3, h4 {
-  font-family: "AceTate", sans-serif;
-  font-weight: 200; 
+h3,
+h4 {
+  font-family: var(--font-base);
+  font-weight: 200; /* light */
 }
 
-
-p, li {
-  font-family: "AceTate", sans-serif;
-  font-weight: 200;
+p,
+li {
+  font-family: var(--font-base);
+  font-weight: 200; /* light */
 }
 
-
-blockquote, em {
-  font-family: "ArizonaSerif", serif;
+blockquote,
+em {
+  font-family: var(--font-serif);
 }
-
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+small {
+  font-family: var(--font-base);
+  font-weight: 200;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* -------------------------------
+   Navigatie
+---------------------------------*/
+.main-nav a {
+  font-size: 0.85rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* -------------------------------
+   Buttons & CTA links
+---------------------------------*/
+button,
+a.button {
+  display: inline-block;
+  background: var(--color-button-bg);
+  color: var(--color-button-text);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-base);
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 9999px; /* ronde uiteindes */
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+a.button:hover {
+  background: var(--color-black);
+  color: var(--color-white);
 }
