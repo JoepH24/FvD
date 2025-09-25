@@ -17,7 +17,7 @@ if (closeMenu && nav) {
   });
 }
 
-// Zo kan je sluiten met ESC 
+// Zo kan ik sluiten met ESC 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && nav && nav.classList.contains('open')) {
     nav.classList.remove('open');
@@ -39,11 +39,11 @@ if (header) {
     }
 
     if (currentScroll > lastScroll) {
-      // Naar beneden scrollen → verberg mijn header
+      // Naar beneden scrollen om mijn header te verbergen mijn header
       header.classList.add('hide');
       header.classList.remove('show');
     } else {
-      // Naar boven scrollen → toon de header
+      // Naar boven scrollen om mijn header te tonen
       header.classList.add('show');
       header.classList.remove('hide');
     }
