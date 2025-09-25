@@ -1,6 +1,4 @@
-/* -------------------------------
-   Fonts
----------------------------------*/
+/*  Fonts */
 @font-face {
   font-family: "AceTate";
   src: url("../fonts/AmperSans-Light.woff2") format("woff2");
@@ -29,9 +27,7 @@
   font-style: normal;
 }
 
-/* -------------------------------
-   Root variabelen
----------------------------------*/
+/* Root variabelen */
 :root {
   /* Kleuren */
   --color-white: #ffffff;
@@ -49,18 +45,14 @@
   --font-serif: "ArizonaSerif", serif;
 }
 
-/* -------------------------------
-   Reset
----------------------------------*/
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* -------------------------------
-   Basis typografie
----------------------------------*/
+/* Basis typografie */
 body {
   font-family: var(--font-base);
   font-weight: 400;
@@ -72,24 +64,24 @@ body {
 
 h1 {
   font-family: var(--font-base);
-  font-weight: 500; /* medium */
+  font-weight: 500; 
 }
 
 h2 {
   font-family: var(--font-base);
-  font-weight: 400; /* regular */
+  font-weight: 400; 
 }
 
 h3,
 h4 {
   font-family: var(--font-base);
-  font-weight: 200; /* light */
+  font-weight: 200; 
 }
 
 p,
 li {
   font-family: var(--font-base);
-  font-weight: 200; /* light */
+  font-weight: 200; 
 }
 
 blockquote,
@@ -109,18 +101,14 @@ small {
   color: #555;
 }
 
-/* -------------------------------
-   Navigatie
----------------------------------*/
+/* Navigatie */
 .main-nav a {
   font-size: 0.85rem;
   font-weight: 400;
   white-space: nowrap;
 }
 
-/* -------------------------------
-   Buttons & CTA links
----------------------------------*/
+/* Buttons (LINKS a'tjes) */
 button,
 a.button {
   display: inline-block;
@@ -131,7 +119,7 @@ a.button {
   font-family: var(--font-base);
   font-weight: 400;
   cursor: pointer;
-  border-radius: 9999px; /* ronde uiteindes */
+  border-radius: 9999px; 
   text-align: center;
   transition: all 0.2s ease-in-out;
 }

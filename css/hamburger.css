@@ -1,24 +1,22 @@
-/* =============================
-   Overlay navigatie mobiel
-============================= */
+/* Overlay navigatie mobiel */
 .main-nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* schuift logo naar onder */
+  justify-content: space-between; 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-white); /* altijd massief wit */
+  background-color: var(--color-white); 
   padding: 2rem 1.5rem;
   gap: 1.5rem;
-  z-index: 2000; /* hoger dan header */
+  z-index: 2000; 
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
 
-/* wanneer open */
+/* wanneer ik hem open */
 .main-nav.open {
   transform: translateX(0);
 }
@@ -29,7 +27,7 @@
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  align-self: flex-start; /* links bovenin */
+  align-self: flex-start; 
   margin-bottom: 2rem;
 }
 

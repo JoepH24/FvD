@@ -1,4 +1,4 @@
-// ===== Hamburger menu  =====
+//  Hamburger menu  
 const menuToggle = document.querySelector('.menu-toggle');
 const closeMenu  = document.querySelector('.close-menu');
 const nav        = document.querySelector('.main-nav');
@@ -25,7 +25,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ===== Header show/hide bij scroll =====
+// Header show/hide bij het scrollen
 let lastScroll = 0;
 const header = document.querySelector('header');
 
