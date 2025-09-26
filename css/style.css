@@ -1,25 +1,22 @@
-/*  Fonts */
+/* Fonts */
 @font-face {
   font-family: "AceTate";
   src: url("../fonts/AmperSans-Light.woff2") format("woff2");
   font-weight: 200; 
   font-style: normal;
 }
-
 @font-face {
   font-family: "AceTate";
   src: url("../fonts/AmperSans-Regular.woff2") format("woff2");
   font-weight: 400; 
   font-style: normal;
 }
-
 @font-face {
   font-family: "AceTate";
   src: url("../fonts/AmperSans-Medium.woff2") format("woff2");
   font-weight: 500; 
   font-style: normal;
 }
-
 @font-face {
   font-family: "ArizonaSerif";
   src: url("../fonts/ATArizonaSerif-Regular.woff2") format("woff2");
@@ -27,7 +24,7 @@
   font-style: normal;
 }
 
-/* Root variabelen */
+
 :root {
   /* Kleuren */
   --color-white: #ffffff;
@@ -36,7 +33,7 @@
   --color-off-white: #fefefe;
   --color-text: #000000;
 
-  /* Buttons */
+  /* Links */
   --color-button-bg: #ffffff;
   --color-button-text: #000000;
 
@@ -45,6 +42,7 @@
   --font-serif: "ArizonaSerif", serif;
 }
 
+
 /* Reset */
 * {
   margin: 0;
@@ -52,7 +50,8 @@
   box-sizing: border-box;
 }
 
-/* Basis typografie */
+
+/* Typografie */
 body {
   font-family: var(--font-base);
   font-weight: 400;
@@ -61,39 +60,29 @@ body {
   background: var(--color-white);
   overflow-x: hidden;
 }
-
 h1 {
   font-family: var(--font-base);
   font-weight: 500; 
 }
-
 h2 {
   font-family: var(--font-base);
   font-weight: 400; 
 }
-
-h3,
-h4 {
+h3, h4 {
   font-family: var(--font-base);
   font-weight: 200; 
 }
-
-p,
-li {
+p, li {
   font-family: var(--font-base);
   font-weight: 200; 
 }
-
-blockquote,
-em {
+blockquote, em {
   font-family: var(--font-serif);
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
 small {
   font-family: var(--font-base);
   font-weight: 200;
@@ -101,31 +90,36 @@ small {
   color: #555;
 }
 
-/* Navigatie */
+
+/* Navigatie Header */
 .main-nav a {
   font-size: 0.85rem;
   font-weight: 400;
   white-space: nowrap;
 }
 
-/* Buttons (LINKS a'tjes) */
+
+/* Links */
 button,
-a.button {
+a.button,
+input[type="submit"] {
   display: inline-block;
   background: var(--color-button-bg);
   color: var(--color-button-text);
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 2.5rem;
   font-family: var(--font-base);
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
   border-radius: 9999px; 
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
-
 button:hover,
-a.button:hover {
+a.button:hover,
+input[type="submit"]:hover {
   background: var(--color-black);
   color: var(--color-white);
 }
+
+

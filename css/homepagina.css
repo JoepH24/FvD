@@ -1,4 +1,4 @@
-/* Header scroll animatie*/
+/* Header scroll animatie */
 header {
   background: var(--color-white);
   border-bottom: 1px solid #eee;
@@ -9,17 +9,12 @@ header {
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
 }
-
 header.show {
   transform: translateY(0);
 }
-
 header.hide {
   transform: translateY(-100%);
 }
-
-
-
 
 
 /* Promo bar */
@@ -30,15 +25,13 @@ header.hide {
   font-size: 0.85rem;
   padding: 0.3rem;
 }
-
 .promo-bar a {
   color: var(--color-white);
   text-decoration: underline;
 }
 
 
-
-/* Styling mobiel*/
+/* Main-header styling */
 .main-header {
   display: flex;
   align-items: center;
@@ -47,7 +40,8 @@ header.hide {
   border-bottom: 1px solid #eee;
 }
 
-/* Hamburger helemaal links */
+
+/* Hamburger-button */
 .menu-toggle {
   background: none;
   border: none;
@@ -56,17 +50,18 @@ header.hide {
   order: 0;
 }
 
-/* Logo direct naast hamburger */
+
+/* Logo */
 .logo {
   order: 1;
   margin-left: 0.5rem;
 }
-
 .logo img {
   height: 24px;
 }
 
-/* Icons helemaal rechts (alleen mobiel zichtbaar) */
+
+/* Icons mobiel */
 .header-icons {
   order: 2;
   margin-left: auto;
@@ -74,59 +69,42 @@ header.hide {
   gap: 1rem;
   list-style: none;
 }
-
 .header-icons img {
   height: 20px;
 }
 
-/* Nav-secties verbergen op mobiel */
+
+/* Navigatie in hamburgermenu stoppen */
 .nav-left,
 .nav-right {
   display: none;
 }
 
-/* Quick nav onder header (mobiel) */
+
+/* Quick nav 3 links onder mainheader */
 .quick-nav {
   border-bottom: 1px solid #eee;
 }
-
 .quick-nav ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
   padding: 0.8rem 1rem;
 }
-
 .quick-nav a {
   color: var(--color-black);
   font-size: 1rem;
   font-weight: 500;
 }
 
-/* Quick nav verbergen op desktop */
-@media (min-width: 1024px) {
-  .quick-nav {
-    display: none;
-  }
 
-  .header-icons {
-    display: none; 
-  }
-}
-
-
-
-
-
-
-/* desktop*/
+/* Desktop main-header */
 @media (min-width: 1024px) {
   .menu-toggle,
   .close-menu,
   .quick-nav {
     display: none; 
   }
-
   .main-header {
     display: flex;
     align-items: center;
@@ -134,19 +112,14 @@ header.hide {
     padding: 1rem 2rem;
     border-bottom: 1px solid #eee;
   }
-
-  /* Logo altijd helemaal links */
   .logo {
     order: 0;
     margin-right: 2rem;
   }
-
-  /* Nav left direct na logo */
   .nav-left {
     order: 1;
     display: block;
   }
-
   .nav-left ul {
     list-style: none;
     display: flex;
@@ -154,20 +127,16 @@ header.hide {
     margin: 0;
     padding: 0;
   }
-
   .nav-left a {
     color: var(--color-black);
     font-size: 1rem;
     font-weight: 500;
   }
-
-  /* Nav right helemaal rechts */
   .nav-right {
     order: 2;
-    margin-left: auto; /* duwt 'm naar de rechterkant */
+    margin-left: auto;
     display: block;
   }
-
   .nav-right ul {
     list-style: none;
     display: flex;
@@ -176,7 +145,6 @@ header.hide {
     padding: 0;
     align-items: center;
   }
-
   .nav-right a {
     color: var(--color-black);
     font-size: 1rem;
@@ -185,100 +153,75 @@ header.hide {
     align-items: center;
     white-space: nowrap;
   }
-
   .nav-right img {
     height: 20px;
     display: block;
   }
-
   .nav-right li {
     display: flex;
     align-items: center;
   }
-
-  /* Overlay nav is alleen mobiel */
   .main-nav {
     display: none;
   }
 }
 
 
-
-
-
-
-/* Section 1*/
-main section:nth-of-type(1) {
-  background-image: url("../afbeeldingen/vrouw1a.jpg");
-  background-size: cover;
-  background-position: center top;
+/* Section 1 */
+main section:first-of-type {
+  background: url("../afbeeldingen/vrouw1a.jpg") center top / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   gap: 0.5rem;
-
   min-height: 40rem;
   padding: 2rem 1rem;
-
   text-align: center;
   color: var(--color-white);
 }
-
-main section:nth-of-type(1) h1 {
+main section:first-of-type h1 {
   font-size: 1.8rem;
   color: var(--color-white);
 }
-
-@media (min-width: 768px) {
-  main section:nth-of-type(1) h1 {
-    font-size: 2.5rem;
-  }
-}
-
-/* links die op buttons lijken*/
-main section:nth-of-type(1) a {
-  display: inline-block;                 
+main section:first-of-type a {
+  display: inline-block;
   background: var(--color-button-bg);
   color: var(--color-button-text);
   padding: 0.75rem 2.5rem;
-  border-radius: 2rem;
+  border-radius: 9999px; 
   font-weight: 500;
   text-decoration: none;
-  margin: 0.2rem 0;                      
+  margin: 0.2rem 0;
   text-align: center;
   white-space: nowrap;
   transition: all 0.2s ease-in-out;
 }
-
-main section:nth-of-type(1) a:hover {
+main section:first-of-type a:hover {
   background: var(--color-black);
   color: var(--color-white);
 }
-
-/* naast elkaar wat extra ruimte */
 @media (min-width: 768px) {
-  main section:nth-of-type(1) a {
-    margin: 0 0.5rem;                    
+  main section:first-of-type h1 {
+    font-size: 2.5rem;
+  }
+  main section:first-of-type a {
+    margin: 0 0.5rem;
   }
 }
 
 
-
-/* Section 2*/
+/* Section 2 */
 main section:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
 main section:nth-of-type(2) article {
   flex: 1;
   min-height: 50vh;
-  background-size: cover;
-  background-position: center;
+  background: center / cover no-repeat;
   color: var(--color-white);
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -287,23 +230,18 @@ main section:nth-of-type(2) article {
   gap: 0.3rem;
   text-align: left;
 }
-
-/* Achtergrondafbeeldingen */
 main section:nth-of-type(2) article:first-of-type {
   background-image: url("../afbeeldingen/brilpersonen.jpg");
 }
-
 main section:nth-of-type(2) article:last-of-type {
   background-image: url("../afbeeldingen/oogmeting.jpeg");
 }
-
-/* a-links in Section 2 (gestyled as buttons) */
 main section:nth-of-type(2) a {
   display: inline-block;
   background: var(--color-button-bg);
   color: var(--color-button-text);
   padding: 0.75rem 2.5rem;
-  border-radius: 2rem;
+  border-radius: 9999px;
   font-weight: 500;
   text-decoration: none;
   margin: 0.2rem 0;
@@ -311,53 +249,41 @@ main section:nth-of-type(2) a {
   white-space: nowrap;
   transition: all 0.2s ease-in-out;
 }
-
 main section:nth-of-type(2) a:hover {
   background: var(--color-black);
   color: var(--color-white);
 }
-
 @media (min-width: 768px) {
   main section:nth-of-type(2) {
     flex-direction: row;
   }
-
   main section:nth-of-type(2) article {
     min-height: 100vh;
   }
-
   main section:nth-of-type(2) a {
     margin: 0 0.5rem; 
   }
 }
 
 
-
-
-
-
-
-/* Section 3*/
+/* Section 3 */
 main section:nth-of-type(3) {
   background: var(--color-light-gray);
   padding: 2rem 0;
 }
-
 main section:nth-of-type(3) h2 {
-  font-family: var(--font-serif); 
+  font-family: var(--font-serif);
   font-size: 2.3rem;
   color: var(--color-black);
   text-align: left;
-  margin: 0 0 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 0 1rem;
 }
-
 main section:nth-of-type(3) hr {
   border: none;
   border-bottom: 1px solid var(--color-black);
-  margin: 0 0 1.5rem;
+  margin-bottom: 1.5rem;
 }
-
 main section:nth-of-type(3) figcaption {
   font-family: var(--font-serif);
   font-size: 1.3rem;
@@ -365,7 +291,6 @@ main section:nth-of-type(3) figcaption {
   margin-top: 0.5rem;
   text-align: center;
 }
-
 main section:nth-of-type(3) ul {
   list-style: none;
   display: flex;
@@ -375,19 +300,16 @@ main section:nth-of-type(3) ul {
   padding: 0 1rem;
   margin: 0;
 }
-
 main section:nth-of-type(3) li {
   flex: 0 0 70%;
   scroll-snap-align: start;
   min-width: 0; 
 }
-
 main section:nth-of-type(3) img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 @media (min-width: 768px) {
   main section:nth-of-type(3) ul {
     display: grid;
@@ -395,22 +317,17 @@ main section:nth-of-type(3) img {
     gap: 2rem;
     overflow: visible;
   }
-
   main section:nth-of-type(3) li {
     flex: none;
   }
 }
 
 
-
-
-/* Section 4*/
+/* Section 4 */
 main section:nth-of-type(4) {
   background: #fff;
   padding: 0;
 }
-
-/* telefonische horizontale slider */
 main section:nth-of-type(4) ul {
   list-style: none;
   display: flex;
@@ -420,27 +337,22 @@ main section:nth-of-type(4) ul {
   margin: 0;
   padding: 0;
 }
-
 main section:nth-of-type(4) li {
   flex: 0 0 80%;         
   min-width: 0;
   scroll-snap-align: start;
   position: relative;
 }
-
 main section:nth-of-type(4) figure {
   position: relative;    
   margin: 0;
 }
-
 main section:nth-of-type(4) img {
   display: block;
   width: 100%;
   height: 55vh;          
   object-fit: cover;
 }
-
-/* a'tjes-links als overlay button */
 main section:nth-of-type(4) a {
   position: absolute;
   bottom: 1rem;
@@ -448,18 +360,15 @@ main section:nth-of-type(4) a {
   background: var(--color-button-bg);
   color: var(--color-button-text);
   padding: 0.75rem 2rem;
-  border-radius: 2rem;
+  border-radius: 9999px; 
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
-
 main section:nth-of-type(4) a:hover {
   background: var(--color-black);
   color: var(--color-white);
 }
-
-
 @media (min-width: 1024px) {
   main section:nth-of-type(4) ul {
     display: grid;
@@ -467,11 +376,9 @@ main section:nth-of-type(4) a:hover {
     overflow: visible;
     scroll-snap-type: none;
   }
-
   main section:nth-of-type(4) li {
     flex: none;
   }
-
   main section:nth-of-type(4) img {
     height: 65vh;
     object-fit: cover;
@@ -479,15 +386,11 @@ main section:nth-of-type(4) a:hover {
 }
 
 
-
-
-
-/* Section 5 */
+/* Section 5 (Bestsellers) */
 main section:nth-of-type(5) {
   background: var(--color-light-gray);
   padding: 2rem 0;
 }
-
 main section:nth-of-type(5) h2 {
   font-family: var(--font-serif);
   font-size: 2.3rem;
@@ -496,13 +399,36 @@ main section:nth-of-type(5) h2 {
   margin: 0 0 0.5rem;
   padding: 0 1rem;
 }
-
 main section:nth-of-type(5) hr {
   border: none;
   border-bottom: 1px solid var(--color-black);
   margin: 0 0 1.5rem;
 }
-
+main section:nth-of-type(5) ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory;
+  padding: 0 1rem;
+  margin: 0;
+}
+main section:nth-of-type(5) li {
+  flex: 0 0 70%;
+  scroll-snap-align: start;
+  min-width: 0;
+  background: none;
+}
+main section:nth-of-type(5) figure {
+  text-align: center;
+  margin: 0;
+  background: none;
+}
+main section:nth-of-type(5) img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 main section:nth-of-type(5) figcaption {
   font-family: var(--font-serif);
   color: var(--color-black);
@@ -510,44 +436,17 @@ main section:nth-of-type(5) figcaption {
   text-align: center;
   line-height: 1.3;
 }
-
-/* Bovenste regel (naam bril) dik */
 main section:nth-of-type(5) figcaption strong {
   display: block;
   font-size: 1.2rem;
   font-weight: 600;
 }
-
-/* Onderste regel (kleur) dunner en kleiner */
-main section:nth-of-type(5) figcaption span {
+main section:nth-of-type(5) figcaption small {
   display: block;
   font-size: 1rem;
   font-weight: 300;
   color: #444;
 }
-
-main section:nth-of-type(5) ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto; /* mobiel slider */
-  scroll-snap-type: x mandatory;
-  padding: 0 1rem;
-  margin: 0;
-}
-
-main section:nth-of-type(5) li {
-  flex: 0 0 70%;
-  scroll-snap-align: start;
-  min-width: 0;
-}
-
-main section:nth-of-type(5) img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 @media (min-width: 768px) {
   main section:nth-of-type(5) ul {
     display: grid;
@@ -555,30 +454,24 @@ main section:nth-of-type(5) img {
     gap: 2rem;
     overflow: visible;
   }
-
   main section:nth-of-type(5) li {
     flex: none;
   }
 }
 
 
-
-
-
-/* Section 6*/
+/* Section 6 */
 main section:nth-of-type(6) {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
 main section:nth-of-type(6) article {
   flex: 1;
   min-height: 50vh;
   background-size: cover;
   background-position: center;
   color: var(--color-white);
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -587,17 +480,12 @@ main section:nth-of-type(6) article {
   gap: 0.5rem;
   text-align: left;
 }
-
-/* Achtergronden */
 main section:nth-of-type(6) article:first-of-type {
   background-image: url("../afbeeldingen/vrouwbril3.png");
 }
-
 main section:nth-of-type(6) article:last-of-type {
   background-image: url("../afbeeldingen/hoekwinkel.jpeg");
 }
-
-/* CTA-links als knoppen */
 main section:nth-of-type(6) a {
   display: inline-block;
   background: var(--color-button-bg);
@@ -611,36 +499,29 @@ main section:nth-of-type(6) a {
   white-space: nowrap;
   transition: all 0.2s ease-in-out;
 }
-
 main section:nth-of-type(6) a:hover {
   background: var(--color-black);
   color: var(--color-white);
 }
-
 @media (min-width: 768px) {
   main section:nth-of-type(6) {
     flex-direction: row;
   }
-
   main section:nth-of-type(6) article {
     min-height: 100vh;
   }
-
   main section:nth-of-type(6) a {
     margin: 0 0.5rem;
   }
 }
 
 
-
-/* Section 7 (Nieuwsbrief)*/
-
+/* Section 7 */
 main section:nth-of-type(7) {
   background: #eae2dc;
-  color: #000;
+  color: var(--color-black);
   padding: 2rem 1rem;
 }
-
 main section:nth-of-type(7) h2 {
   font-family: var(--font-serif);
   font-size: 1.8rem;
@@ -648,13 +529,11 @@ main section:nth-of-type(7) h2 {
   line-height: 1.3;
   text-align: left;
 }
-
 main section:nth-of-type(7) form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 main section:nth-of-type(7) input[type="email"] {
   padding: 0.8rem;
   font-size: 1rem;
@@ -662,8 +541,6 @@ main section:nth-of-type(7) input[type="email"] {
   border-radius: 0.4rem;
   width: 100%;
 }
-
-/* Consent (fieldset + checkbox) */
 main section:nth-of-type(7) fieldset {
   border: none;
   padding: 0;
@@ -673,50 +550,26 @@ main section:nth-of-type(7) fieldset {
   gap: 0.5rem;
   font-size: 0.9rem;
 }
-
 main section:nth-of-type(7) fieldset input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
   margin-top: 0.2rem;
 }
-
-/* Submit-knop */
 main section:nth-of-type(7) input[type="submit"] {
-  background: #000;
-  color: #fff;
-  border: none;
-  border-radius: 2rem;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
   align-self: flex-start;
-  transition: all 0.2s ease-in-out;
 }
-
-main section:nth-of-type(7) input[type="submit"]:hover {
-  background: var(--color-black);
-  color: var(--color-white);
-}
-
 @media (min-width: 768px) {
   main section:nth-of-type(7) {
     padding: 3rem 4rem;
   }
-
   main section:nth-of-type(7) h2 {
     font-size: 2.5rem;
     max-width: 60%;
   }
-
   main section:nth-of-type(7) form {
     max-width: 60%;
   }
 }
-
-
-
-
-
 
 
 footer {
@@ -725,17 +578,13 @@ footer {
   padding: 2rem 1rem;
   font-size: 0.95rem;
 }
-
 footer a {
   color: #fff;
   text-decoration: none;
 }
-
 footer a:hover {
   text-decoration: underline;
 }
-
-/* Kleine inline-icoontjes (WhatsApp, Locatie) */
 footer img[alt="WhatsApp"],
 footer img[alt="Locatie"] {
   width: 1rem;
@@ -743,13 +592,10 @@ footer img[alt="Locatie"] {
   margin-right: 0.5rem;
   vertical-align: middle;
 }
-
-/* Bovenste blok van de footer */
 footer section:first-of-type h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-
 footer section:first-of-type nav ul {
   list-style: none;
   padding: 0;
@@ -758,8 +604,6 @@ footer section:first-of-type nav ul {
   flex-direction: column;
   gap: 0.5rem;
 }
-
-/* Onderste blok van mijn footer */
 footer section:last-of-type {
   margin-top: 2rem;
   border-top: 1px solid #333;
@@ -768,13 +612,11 @@ footer section:last-of-type {
   flex-direction: column;
   gap: 1.5rem;
 }
-
 footer section:last-of-type aside {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 footer section:last-of-type ul {
   list-style: none;
   display: flex;
@@ -783,41 +625,32 @@ footer section:last-of-type ul {
   padding: 0;
   margin: 0;
 }
-
 footer address {
   font-style: normal;
   font-size: 0.9rem;
 }
-
-/* Logo's */
 footer img[alt*="Certified"] {
   max-width: 100px;
   height: auto;
 }
-
 footer section:last-of-type figure {
   text-align: center;
 }
-
 footer section:last-of-type figure img {
   max-width: 160px;
   height: auto;
 }
-
-/* Desktop layout */
 @media (min-width: 768px) {
   footer section:first-of-type nav ul {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
   }
-
   footer section:last-of-type {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
   }
-
   footer section:last-of-type aside {
     flex-direction: row;
     align-items: center;
@@ -825,22 +658,29 @@ footer section:last-of-type figure img {
     gap: 2rem;
     width: 100%;
   }
-
   footer section:last-of-type ul {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
   }
-
   footer section:last-of-type figure img {
-    max-width: 220px; /* iets groter op desktop */
+    max-width: 220px; 
     height: auto;
   }
 }
 
-
-
-/* Niet horzontaal scrollen!!!!*/
+/* Niet horzontaal scrollen */
 html, body {
   overflow-x: hidden;
+}
+
+
+/* Quick nav verbergen op desktop */
+@media (min-width: 1024px) {
+  .quick-nav {
+    display: none;
+  }
+  .header-icons {
+    display: none; 
+  }
 }

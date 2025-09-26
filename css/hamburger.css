@@ -1,4 +1,4 @@
-/* Overlay navigatie mobiel */
+/* Hamburgermenu styling */
 .main-nav {
   display: flex;
   flex-direction: column;
@@ -15,13 +15,13 @@
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
-
-/* wanneer ik hem open */
+/* Geopend */
 .main-nav.open {
   transform: translateX(0);
 }
 
-/* Sluit-knop */
+
+/* Sluit-Button */
 .close-menu {
   background: none;
   border: none;
@@ -31,7 +31,8 @@
   margin-bottom: 2rem;
 }
 
-/* Lijsten */
+
+/* Main-nav ul styling */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -41,7 +42,8 @@
   padding: 0;
 }
 
-/* Links */
+
+/* Main-nav ul links styling */
 .main-nav a {
   text-decoration: none;
   color: var(--color-black);
@@ -49,17 +51,20 @@
   font-weight: 500;
 }
 
-/* Bovenste menu (dikgedrukt) */
+
+/* Bovenste menu styling */
 .main-nav .menu-top a {
   font-weight: 600;
   font-size: 1.2rem;
 }
 
-/* Onderste menu (normaal) */
+
+/* Onderste menu styling */
 .main-nav .menu-bottom a {
   font-weight: 400;
   font-size: 1.1rem;
 }
+
 
 /* Logo onderaan */
 .menu-logo {
@@ -67,6 +72,8 @@
   padding-top: 2rem;
 }
 
+
+/* Logo formaat */
 .menu-logo img {
   height: 40px;
 }
