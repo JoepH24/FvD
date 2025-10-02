@@ -39,11 +39,11 @@ Responsive
   https://www.aceandtate.com/nl
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Pagina 1  
+  Pagina 1 - Homepagina
   <img src="readme-images/pagina1.png" width="375px" alt="pagina 1 screenshot">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Pagina 2
+  Pagina 2 - Oogmeting
   <img src="readme-images/pagina2.png" width="375px" alt="pagina 2 screenshot">
  
 </details>
@@ -53,10 +53,18 @@ Responsive
 ## Toegankelijkheidstest 1/2 (week 1)
 
 <details>
-  <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
+![IMG_2313](https://github.com/user-attachments/assets/707ab0fd-d7fc-488e-b419-157f2b3f7ff9)
+![IMG_2317](https://github.com/user-attachments/assets/b71aa592-c847-4679-b2ba-4f6351417ed6)
+![IMG_2316](https://github.com/user-attachments/assets/5592ef77-838c-439e-b3d0-b3fe32de750c)
+![IMG_2315](https://github.com/user-attachments/assets/94afcd34-7df0-441a-bb5e-e998244eda7d)
+![IMG_2314](https://github.com/user-attachments/assets/999cbdc7-8bbe-4443-905b-2fcca4df1da4)
+
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - De officiele website zit vol met Div's
+  - De "alt's" zijn aan verbetering toe
+  - Geen h1 aanwezig
 
 </details>
 
