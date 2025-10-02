@@ -91,7 +91,9 @@ Responsive
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Bij voortgangsgesprek 1 was ik enkel nog met de html bezig geweest, ik had op basis van mijn 
+  breakdownschets de header, main en footer ingedeeld met sections en ik had net de afbeeldingen 
+  en fonts gedownload met Image-downloader en Fonts-ninja.
 
 
   ### Agenda voor meeting
@@ -105,13 +107,13 @@ Responsive
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  Na dit gesprek is mij duidelijk geworden dat ik nog even de Icons moet downloaden (dit kan ik doen
+  met SVG-Gobbler) en dat ik op schema loop. Het is nu de bedoeling dat ik verder ga met de CSS en dat
+  ik in mijn styles.css bestand roots kan gaan aanmaken. 
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
-
+  - punt 1 - Beginnen aan mijn CSS
+  - punt 2 - SVG-Gobbler toepassen
+  - 
 </details>
 
 
@@ -124,7 +126,9 @@ Responsive
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ Bij voortgangsgesprek 2 (dit was voor andere gesprek 3 maar ik heb dit gesprek gemist wegens ziekte)
+ was ik al een stuk verder gekomen met mijn Homepagina, ik had al een header, de main met 7 sections 
+ en een footer. Deze ware allemaal responsive. 
 
 
   ### Agenda voor meeting
@@ -138,12 +142,18 @@ Responsive
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+Mijn header had ik eigenwijs opgebouwd met classes, dit gaan we direct aanpassen naar semantische html door
+alle onderdelen met selectoren en ..-of-type vorm te geven. Ik had nog geen light-darkmode toegepast in mijn website.
+En de Screenreader pakte mijn hamburgermenu mee wanneer deze niet zichtbaar was op desktop formaat. Mijn links (die op
+de website eruit zien als buttons) zijn ook echt buttons, het is heel belangrijk om hier links van te maken anders is mijn 
+website zeker niet semantisch. Mijn code mag overichtelijker met duidelijke notities als titels.
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - punt 1 - Website volledig zonder classes
+  - punt 2 - Toepassen light/Dark-mode 
+  - punt 3 - Hamburgermenu onzichtbaarmaken
+    voor screenreader op telefoon formaat
+  - punt 4 - Links niet als buttons coderen
+  - punt 5 - Code overzichtelijker maken
 
 </details>
 
