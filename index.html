@@ -11,21 +11,21 @@
 </head>
 <body>
 
-
-  <header> <!-- (Promo-bar) -->
-    <p class="promo-bar">
+  <header>
+    <!-- Promo-bar -->
+    <p>
       <a href="#">Koop een multifocale bril, krijg tweede montuur gratis</a>
     </p>
-
-    <section class="main-header"> <!-- (Hamburgermenu button) -->
-      <button class="menu-toggle" aria-label="Open menu">
+    <section>
+      <!-- Hamburgermenu button -->
+      <button aria-label="Open menu">
         <img src="svg/hamburgermenu.svg" alt="Menu">
       </button>
-
-      <a href="/" class="logo"> <!-- (Header) -->
+      <a href="/">
         <img src="svg/logoheader.svg" alt="Ace & Tate logo">
       </a>
-      <nav class="nav-left" aria-label="Hoofdmenu links">
+      <!-- Navigatie links -->
+      <nav aria-label="Hoofdmenu links">
         <ul>
           <li><a href="#">Brillen</a></li>
           <li><a href="#">Zonnebrillen</a></li>
@@ -34,7 +34,8 @@
           <li><a href="#">Oogzorg</a></li>
         </ul>
       </nav>
-      <nav class="nav-right" aria-label="Hoofdmenu rechts">
+      <!-- Navigatie rechts -->
+      <nav aria-label="Hoofdmenu rechts">
         <ul>
           <li><a href="#">Gratis oogmeting</a></li>
           <li><a href="#">Winkels</a></li>
@@ -44,14 +45,16 @@
           <li><a href="#"><img src="svg/winkeltas.svg" alt="Winkelmandje"></a></li>
         </ul>
       </nav>
-      <ul class="header-icons">
+      <!-- Iconen apart -->
+      <ul>
         <li><a href="#"><img src="svg/vergrootglas.svg" alt="Zoeken"></a></li>
         <li><a href="#"><img src="svg/hartje.svg" alt="Wishlist"></a></li>
         <li><a href="#"><img src="svg/account.svg" alt="Account"></a></li>
         <li><a href="#"><img src="svg/winkeltas.svg" alt="Winkelmandje"></a></li>
       </ul>
     </section>
-    <nav class="quick-nav" aria-label="Snelle navigatie"> <!-- (Onderkant header telefoonformaat) -->
+    <!-- Quick nav onder header (mobile) -->
+    <nav aria-label="Snelle navigatie">
       <ul>
         <li><a href="#">Brillen</a></li>
         <li><a href="#">Zonnebrillen</a></li>
@@ -59,38 +62,41 @@
       </ul>
     </nav>
   </header>
-
-
-  <nav class="main-nav" aria-label="Uitklapmenu"> <!-- (Hamburgermenu) -->
-    <button class="close-menu" aria-label="Sluit menu">&times;</button>
-    <ul class="menu-top">
+  <!-- Hamburgermenu -->
+  <nav aria-label="Uitklapmenu" hidden>
+    <button aria-label="Sluit menu">&times;</button>
+    <ul>
       <li><a href="#">Brillen</a></li>
       <li><a href="#">Zonnebrillen</a></li>
       <li><a href="#">Accessoires</a></li>
       <li><a href="#">Service</a></li>
       <li><a href="#">Oogzorg</a></li>
     </ul>
-    <ul class="menu-bottom">
+    <ul>
       <li><a href="#">Gratis oogmeting</a></li>
       <li><a href="#">Winkels</a></li>
       <li><a href="#">Mijn account</a></li>
       <li><a href="#">Contact opnemen</a></li>
     </ul>
-    <a href="/" class="menu-logo">
-      <img src="svg/hamburgermenulogo.svg" alt="& logo">
-    </a>
+      <a href="/">
+        <img src="svg/hamburgermenulogo.svg" alt="& logo">
+      </a>
   </nav>
-
-
+  
   <main>
-    <section> <!-- (1) -->
+    <!-- Section 1 -->
+    <section aria-label="Hero video">
+      <video id="hero-video" playsinline muted>
+        <source src="afbeeldingen/acetate.mp4" type="video/mp4">
+        Je browser ondersteunt deze video niet.
+      </video>
       <h1>We’re serious about eyewear</h1>
       <a href="#">Shop collectie</a>
-      <a href="#">Ontdek meer</a>
+      <a href="#" id="play-video">Speel af</a>
     </section>
 
-
-    <section> <!-- (2) -->
+    <!-- Section 2 -->
+    <section> 
       <article>
         <h2>Tijdelijke Bundel Aanbieding</h2>
         <p>Bespaar nu 50% op elke extra bril.</p>
@@ -101,8 +107,8 @@
       </article>
     </section>
     
-
-    <section> <!-- (3) -->
+    <!-- Section 3 -->
+    <section> 
       <h2>Nieuw</h2>
       <hr>
       <ul>
@@ -133,8 +139,8 @@
       </ul>
     </section>
 
-
-    <section> <!-- (4) -->
+    <!-- Section 4 -->
+    <section> 
       <ul>
         <li>
           <figure>
@@ -157,8 +163,8 @@
       </ul>
     </section>
 
-
-    <section> <!-- (5) -->
+    <!-- Section 5 -->
+    <section> 
       <h2>Bestsellers</h2>
       <hr>
       <ul>
@@ -210,8 +216,8 @@
       </ul>
     </section>
 
-
-    <section> <!-- (6) -->
+    <!-- Section 6 -->
+    <section> 
       <article>
         <a href="#">Shop zonnebrillen op sterkte</a>
       </article>
@@ -220,14 +226,12 @@
       </article>
     </section>
 
-
-    <section> <!-- (7) -->
+    <!-- Section 7 https://www.w3schools.com/html/html_forms.asp?utm_ & https://www.w3schools.com/tags/att_input_type_email.asp?utm_-->
+    <section> 
       <h2>Meld je aan voor onze nieuwsbrief voor de laatste Ace & Tate updates.</h2>
-    
       <form>
         <label for="email">E-mailadres</label>
         <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-    
         <fieldset>
           <legend>Toestemming</legend>
           <input type="checkbox" id="consent" required>
@@ -236,20 +240,18 @@
             <a href="#">privacybeleid</a> gelezen *
           </label>
         </fieldset>
-    
         <input type="submit" value="Meld je aan">
       </form>
     </section>
-  </main>
+    </main>
 
-
-  
-  <footer>
+    <!-- Footer -->
+    <footer>
     <section>
       <h3>We staan voor je klaar</h3>
       <p>Ma – Vr, 9:00 – 17:00</p>
       <p>
-        <img src="svg/whatsapp.svg" alt="WhatsApp"> +31 97010240634
+        <img src="svg/whatsappwit.svg" alt="WhatsApp"> +31 97010240634
       </p>
       <nav aria-label="Hoofdmenu footer">
         <ul>
@@ -270,7 +272,6 @@
         </ul>
       </nav>
     </section>
-
     <section>
       <aside>
         <img src="afbeeldingen/blogo.svg" alt="Certified B Corporation logo">
@@ -286,7 +287,7 @@
         </ul>
         <address>
           <p>
-            <img src="svg/locatie.svg" alt="Locatie">
+            <img src="svg/locatiewit.svg" alt="Locatie">
             <a href="#">Nederland</a> <a href="#">Dutch</a>
           </p>
         </address>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ace & Tate</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/oogmeting.css">
+  <link rel="stylesheet" href="css/hamburger.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <!-- Promo-bar -->
+    <p>
+      <a href="#">Koop een multifocale bril, krijg tweede montuur gratis</a>
+    </p>
+    <section>
+      <!-- Hamburgermenu button -->
+      <button aria-label="Open menu">
+        <img src="svg/hamburgermenu.svg" alt="Menu">
+      </button>
+      <a href="/">
+        <img src="svg/logoheader.svg" alt="Ace & Tate logo">
+      </a>
+      <!-- Navigatie links -->
+      <nav aria-label="Hoofdmenu links">
+        <ul>
+          <li><a href="#">Brillen</a></li>
+          <li><a href="#">Zonnebrillen</a></li>
+          <li><a href="#">Accessoires</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Oogzorg</a></li>
+        </ul>
+      </nav>
+      <!-- Navigatie rechts -->
+      <nav aria-label="Hoofdmenu rechts">
+        <ul>
+          <li><a href="#">Gratis oogmeting</a></li>
+          <li><a href="#">Winkels</a></li>
+          <li><a href="#">Inloggen</a></li>
+          <li><a href="#"><img src="svg/vergrootglas.svg" alt="Zoeken"></a></li>
+          <li><a href="#"><img src="svg/hartje.svg" alt="Wishlist"></a></li>
+          <li><a href="#"><img src="svg/winkeltas.svg" alt="Winkelmandje"></a></li>
+        </ul>
+      </nav>
+      <!-- Iconen apart -->
+      <ul>
+        <li><a href="#"><img src="svg/vergrootglas.svg" alt="Zoeken"></a></li>
+        <li><a href="#"><img src="svg/hartje.svg" alt="Wishlist"></a></li>
+        <li><a href="#"><img src="svg/account.svg" alt="Account"></a></li>
+        <li><a href="#"><img src="svg/winkeltas.svg" alt="Winkelmandje"></a></li>
+      </ul>
+    </section>
+    <!-- Quick nav onder header (mobile) -->
+    <nav aria-label="Snelle navigatie">
+      <ul>
+        <li><a href="#">Brillen</a></li>
+        <li><a href="#">Zonnebrillen</a></li>
+        <li><a href="#">Winkels</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hamburgermenu -->
+  <nav aria-label="Uitklapmenu" hidden>
+    <button aria-label="Sluit menu">&times;</button>
+    <ul>
+      <li><a href="#">Brillen</a></li>
+      <li><a href="#">Zonnebrillen</a></li>
+      <li><a href="#">Accessoires</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="#">Oogzorg</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Gratis oogmeting</a></li>
+      <li><a href="#">Winkels</a></li>
+      <li><a href="#">Mijn account</a></li>
+      <li><a href="#">Contact opnemen</a></li>
+    </ul>
+      <a href="/">
+        <img src="svg/hamburgermenulogo.svg" alt="& logo">
+      </a>
+  </nav>
+  
+  <main>
+    <!-- Section 1 -->
+    <section>
+      <h1>Services om je nieuwe bril te vinden</h1>
+      <p>Een nieuwe bril vinden kan lastig zijn - onze gratis services maken het gemakkelijk om de perfecte bril te vinden.</p>
+    </section>
+
+    <!-- Section 2 -->
+    <section aria-label="Gratis oogtest"> 
+      <figure>
+        <img src="afbeeldingen/oogtest-apparaat.jpg" alt="Oogmeting apparaat">
+      </figure>
+      <article>
+        <h2>Boek een gratis oogtest</h2>
+        <p>
+          Heb je problemen met je ogen? Of heb je ze al twee jaar (of langer) niet laten testen? 
+          Dan is een oogtest boeken de eerste stap. Je kunt in bijna elke Ace & Tate winkel terecht 
+          voor een gratis oogtest.
+        </p>
+        <a href="#">Boek een oogmeting</a>
+      </article>
+    </section>
+    <!-- Section 3 -->
+    <section aria-label="Pupilafstand meten"> 
+      <figure>
+        <img src="afbeeldingen/mozaiek-model.png" alt="Meneer met bril">
+      </figure>
+      <article>
+        <h2>Meet je Pupilafstand</h2>
+        <p>
+          Onze online tool meet de afstand tussen je pupillen (“PD”) in minder dan 
+          twee minuten. We sturen je een link zodra je je bril hebt besteld.
+        </p>
+        <a href="#">Lees verder</a>
+       </article>
+    </section>
+    <!-- Section 4 -->
+    <section aria-label="Bril maten gids"> 
+      <figure>
+        <img src="afbeeldingen/mozaiek-brillen.jpg" alt="Afbeelding van brillen">
+      </figure>
+      <article>
+        <h2>Gids voor onze bril maten</h2>
+        <p>
+          Hoe je het ook wendt of keert — er is een montuur voor elk gezicht. 
+          Kom erachter welke maat de juiste is voor jou.
+        </p>
+        <a href="#">Shop jouw maat</a>
+      </article>
+    </section>
+
+    <!-- Section 5 https://www.w3schools.com/html/html_forms.asp?utm_ & https://www.w3schools.com/tags/att_input_type_email.asp?utm_-->
+    <section aria-label="Nieuwsbrief">
+      <h2>Meld je aan voor onze nieuwsbrief voor de laatste Ace & Tate updates.</h2>
+      <form>
+        <label for="email">E-mailadres</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        <fieldset>
+          <legend>Toestemming</legend>
+          <input type="checkbox" id="consent" required>
+          <label for="consent">
+            Ik geef toestemming voor de verwerking van mijn persoonlijke gegevens en heb het
+            <a href="#">privacybeleid</a> gelezen *
+          </label>
+        </fieldset>
+        <input type="submit" value="Meld je aan">
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <section>
+      <h3>We staan voor je klaar</h3>
+      <p>Ma – Vr, 9:00 – 17:00</p>
+      <p><img src="svg/whatsappwit.svg" alt="WhatsApp"> +31 97010240634</p>
+      <nav aria-label="Hoofdmenu footer">
+        <ul>
+          <li><a href="#">Brillen</a></li>
+          <li><a href="#">Zonnebrillen</a></li>
+          <li><a href="#">Accessoires</a></li>
+          <li><a href="#">Producten</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Leveringsopties</a></li>
+          <li><a href="#">Contact opnemen</a></li>
+          <li><a href="#">Over ons</a></li>
+          <li><a href="#">Verantwoordelijkheid</a></li>
+          <li><a href="#">Vacatures</a></li>
+          <li><a href="#">Opticiens</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Voor bedrijven</a></li>
+          <li><a href="#">Voor studenten</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section>
+      <aside>
+        <img src="afbeeldingen/blogo.svg" alt="Certified B Corporation logo">
+        <ul>
+          <li><a href="#">Toegankelijkheid</a></li>
+          <li><a href="#">Cookiebeleid</a></li>
+          <li><a href="#">Colofon</a></li>
+          <li><a href="#">Privacybeleid</a></li>
+          <li><a href="#">Algemene voorwaarden</a></li>
+          <li><a href="#">Website voorwaarden</a></li>
+          <li><a href="#">Compliance</a></li>
+        </ul>
+        <address>
+          <p><img src="svg/locatiewit.svg" alt="Locatie"> <a href="#">Nederland</a> <a href="#">Dutch</a></p>
+        </address>
+      </aside>
+      <figure>
+        <img src="afbeeldingen/logo.svg" alt="Ace & Tate logo">
+      </figure>
+    </section>
+  </footer>
+</body>
+</html>

@@ -1,222 +1,255 @@
-/* Header scroll animatie */
-header {
-  background: var(--color-white);
-  border-bottom: 1px solid #eee;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: transform 0.3s ease-in-out;
-}
-header.show {
-  transform: translateY(0);
-}
-header.hide {
-  transform: translateY(-100%);
-}
-
-
-/* Promo bar */
-.promo-bar {
-  background: var(--color-black);
-  color: var(--color-white);
-  text-align: center;
-  font-size: 0.85rem;
-  padding: 0.3rem;
-}
-.promo-bar a {
-  color: var(--color-white);
-  text-decoration: underline;
-}
-
-
-/* Main-header styling */
-.main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid #eee;
-}
-
-
-/* Hamburger-button */
-.menu-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  order: 0;
-}
-
-
-/* Logo */
-.logo {
-  order: 1;
-  margin-left: 0.5rem;
-}
-.logo img {
-  height: 24px;
-}
-
-
-/* Icons mobiel */
-.header-icons {
-  order: 2;
-  margin-left: auto;
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-}
-.header-icons img {
-  height: 20px;
-}
-
-
-/* Navigatie in hamburgermenu stoppen */
-.nav-left,
-.nav-right {
-  display: none;
-}
-
-
-/* Quick nav 3 links onder mainheader */
-.quick-nav {
-  border-bottom: 1px solid #eee;
-}
-.quick-nav ul {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  padding: 0.8rem 1rem;
-}
-.quick-nav a {
-  color: var(--color-black);
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-
-/* Desktop main-header */
-@media (min-width: 1024px) {
-  .menu-toggle,
-  .close-menu,
-  .quick-nav {
-    display: none; 
+/* =========================================================
+   HEADER ALGEMEEN & SCROLL ANIMATIE
+   ========================================================= */
+   header {
+    background: var(--color-white);
+    border-bottom: var(--color-white);
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
   }
-  .main-header {
+  header.show { transform: translateY(0); }
+  header.hide { transform: translateY(-100%); }
+  :root { 
+    --header-height: 72px; 
+  }
+  main { 
+    margin-top: var(--header-height); 
+  }
+  
+  /* =========================================================
+     PROMO-BAR
+     ========================================================= */
+  header > p {
+    background: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.3rem;
+    margin: 0;
+  }
+  header > p a {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+  
+  /* =========================================================
+     HOOFD-HEADER (eerste section in de header)
+     ========================================================= */
+  header > section {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    padding: 1rem 2rem;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
     border-bottom: 1px solid #eee;
+    min-height: calc(var(--header-height) - 1px);
+    flex-wrap: nowrap;
   }
-  .logo {
+  /* Hamburgerknop (mobiel links) */
+  header > section > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
     order: 0;
-    margin-right: 2rem;
   }
-  .nav-left {
+  /* Logo (altijd zichtbaar) */
+  header > section > a:first-of-type {
     order: 1;
+    margin-left: 0.5rem;
+  }
+  header > section > a:first-of-type img {
+    height: 24px;
     display: block;
   }
-  .nav-left ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
-  .nav-left a {
-    color: var(--color-black);
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  .nav-right {
+  /* Iconenlijst (mobiel rechts) */
+  header > section > ul {
     order: 2;
     margin-left: auto;
-    display: block;
-  }
-  .nav-right ul {
+    display: flex;
+    gap: 1rem;
     list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    align-items: center;
   }
-  .nav-right a {
-    color: var(--color-black);
-    font-size: 1rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-  }
-  .nav-right img {
+  header > section > ul img {
     height: 20px;
     display: block;
   }
-  .nav-right li {
-    display: flex;
-    align-items: center;
-  }
-  .main-nav {
+  /* Navigatie standaard uit op mobiel */
+  header > section > nav {
     display: none;
   }
-}
+  
+  /* =========================================================
+     QUICK NAV (tweede navigatiebalk onder header op kleinscherm)
+     ========================================================= */
+  header > nav:last-of-type {
+    border-bottom: 1px solid #eee;
+  }
+  header > nav:last-of-type ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0.8rem 1rem;
+  }
+  header > nav:last-of-type a {
+    color: var(--color-black);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  /* =========================================================
+     DESKTOP HEADER (>= 1024px)
+     ========================================================= */
+  @media (min-width: 1024px) {
+    /* Verbergt het hamburgermenu, de quick-nav en icons op desktop */
+    header > section > button,
+    header > nav:last-of-type,
+    header > section > ul {
+      display: none;
+    }
+    header > section {
+      gap: 2rem;
+      padding: 1rem 2rem;
+    }
+    /* Logo links plaatsen*/
+    header > section > a:first-of-type {
+      order: 0;
+      margin-right: 2rem;
+    }
+    /* Navigatie links */
+    header > section > nav:first-of-type {
+      order: 1;
+      display: block;
+    }
+    header > section > nav:first-of-type ul {
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    header > section > nav:first-of-type a {
+      color: var(--color-black);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    /* Navigatie rechts */
+    header > section > nav:last-of-type {
+      order: 2;
+      margin-left: auto;
+      display: block;
+    }
+    header > section > nav:last-of-type ul {
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      align-items: center;
+    }
+    header > section > nav:last-of-type li {
+      display: flex;
+      align-items: center;
+    }
+    header > section > nav:last-of-type a {
+      color: var(--color-black);
+      font-size: 1rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+    header > section > nav:last-of-type img {
+      height: 20px;
+      display: block;
+    }
+  }
+  
 
 
-/* Section 1 */
-main section:first-of-type {
-  background: url("../afbeeldingen/vrouw1a.jpg") center top / cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  min-height: 40rem;
-  padding: 2rem 1rem;
-  text-align: center;
-  color: var(--color-white);
-}
-main section:first-of-type h1 {
-  font-size: 1.8rem;
-  color: var(--color-white);
-}
-main section:first-of-type a {
-  display: inline-block;
-  background: var(--color-button-bg);
-  color: var(--color-button-text);
-  padding: 0.75rem 2.5rem;
-  border-radius: 9999px; 
-  font-weight: 500;
-  text-decoration: none;
-  margin: 0.2rem 0;
-  text-align: center;
-  white-space: nowrap;
-  transition: all 0.2s ease-in-out;
-}
-main section:first-of-type a:hover {
-  background: var(--color-black);
-  color: var(--color-white);
-}
-@media (min-width: 768px) {
+
+
+
+/* =========================================================
+   SECTION 1 – HERO met video achtergrond
+   ========================================================= */
+   main section:first-of-type {
+    position: relative;          
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    min-height: 40rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--color-white);
+    overflow: hidden;         
+  }
+  /* Achtergrondvideo vult hele sectie */
+  main section:first-of-type video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;            
+    transform: translate(-50%, -50%);
+    z-index: -1;           
+  }
+  /* H1 */
   main section:first-of-type h1 {
-    font-size: 2.5rem;
+    font-size: 3.5em;
+    color: var(--color-white);
   }
+  /* Links */
   main section:first-of-type a {
-    margin: 0 0.5rem;
+    display: inline-block;
+    background: var(--color-button-bg);
+    color: var(--color-button-text);
+    padding: 0.75rem 2.5rem;
+    border-radius: 9999px; 
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0.2rem 0;
+    text-align: center;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
   }
-}
+  main section:first-of-type a:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+  /* =========================================================
+     RESPONSIVE (>= 768px)
+     ========================================================= */
+  @media (min-width: 768px) {
+    main section:first-of-type h1 {
+      font-size: 3.5rem;
+    }
+    main section:first-of-type a {
+      margin: 0 0.5rem;
+    }
+  }
+  
 
 
-/* Section 2 */
+
+
+
+/* =========================================================
+   SECTION 2 – PROMO BLOKKEN (Brillen / Oogmeting)
+   ========================================================= */
 main section:nth-of-type(2) {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+/* 2 delen binnen section 2 */
 main section:nth-of-type(2) article {
   flex: 1;
   min-height: 50vh;
@@ -230,12 +263,14 @@ main section:nth-of-type(2) article {
   gap: 0.3rem;
   text-align: left;
 }
+/* Achtergrondbeelden */
 main section:nth-of-type(2) article:first-of-type {
   background-image: url("../afbeeldingen/brilpersonen.jpg");
 }
 main section:nth-of-type(2) article:last-of-type {
   background-image: url("../afbeeldingen/oogmeting.jpeg");
 }
+/* Links */
 main section:nth-of-type(2) a {
   display: inline-block;
   background: var(--color-button-bg);
@@ -253,6 +288,7 @@ main section:nth-of-type(2) a:hover {
   background: var(--color-black);
   color: var(--color-white);
 }
+/* Responsive, naast elkaar op desktop */
 @media (min-width: 768px) {
   main section:nth-of-type(2) {
     flex-direction: row;
@@ -266,11 +302,18 @@ main section:nth-of-type(2) a:hover {
 }
 
 
-/* Section 3 */
+
+
+
+
+/* =========================================================
+   SECTION 3 
+   ========================================================= */
 main section:nth-of-type(3) {
   background: var(--color-light-gray);
   padding: 2rem 0;
 }
+/* Titel & lijn */
 main section:nth-of-type(3) h2 {
   font-family: var(--font-serif);
   font-size: 2.3rem;
@@ -284,6 +327,7 @@ main section:nth-of-type(3) hr {
   border-bottom: 1px solid var(--color-black);
   margin-bottom: 1.5rem;
 }
+/* Afbeeldingen + captions */
 main section:nth-of-type(3) figcaption {
   font-family: var(--font-serif);
   font-size: 1.3rem;
@@ -291,6 +335,12 @@ main section:nth-of-type(3) figcaption {
   margin-top: 0.5rem;
   text-align: center;
 }
+main section:nth-of-type(3) img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Horizontale scroll (mobiel) */
 main section:nth-of-type(3) ul {
   list-style: none;
   display: flex;
@@ -305,11 +355,7 @@ main section:nth-of-type(3) li {
   scroll-snap-align: start;
   min-width: 0; 
 }
-main section:nth-of-type(3) img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+/* Grid layout op desktop */
 @media (min-width: 768px) {
   main section:nth-of-type(3) ul {
     display: grid;
@@ -323,70 +369,94 @@ main section:nth-of-type(3) img {
 }
 
 
-/* Section 4 */
-main section:nth-of-type(4) {
-  background: #fff;
-  padding: 0;
-}
-main section:nth-of-type(4) ul {
-  list-style: none;
-  display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  margin: 0;
-  padding: 0;
-}
-main section:nth-of-type(4) li {
-  flex: 0 0 80%;         
-  min-width: 0;
-  scroll-snap-align: start;
-  position: relative;
-}
-main section:nth-of-type(4) figure {
-  position: relative;    
-  margin: 0;
-}
-main section:nth-of-type(4) img {
-  display: block;
-  width: 100%;
-  height: 55vh;          
-  object-fit: cover;
-}
-main section:nth-of-type(4) a {
-  position: absolute;
-  bottom: 1rem;
-  left: 1.5rem;
-  background: var(--color-button-bg);
-  color: var(--color-button-text);
-  padding: 0.75rem 2rem;
-  border-radius: 9999px; 
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-main section:nth-of-type(4) a:hover {
-  background: var(--color-black);
-  color: var(--color-white);
-}
-@media (min-width: 1024px) {
-  main section:nth-of-type(4) ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: visible;
-    scroll-snap-type: none;
+
+
+
+
+/* =========================================================
+   SECTION 4 
+   ========================================================= */
+   main section:nth-of-type(4) {
+    background: #fff;
+    padding: 0;
   }
+  main section:nth-of-type(4) ul {
+    list-style: none;
+    display: flex;
+    overflow-x: auto;                  
+    -webkit-overflow-scrolling: touch; 
+    scroll-snap-type: x mandatory;     
+    margin: 0;
+    padding: 0;
+  }
+  /* Items in de slider */
   main section:nth-of-type(4) li {
-    flex: none;
+    flex: 0 0 80%;         
+    min-width: 0;
+    scroll-snap-align: start;
+    position: relative;
+  }
+  /* Afbeelding met caption */
+  main section:nth-of-type(4) figure {
+    position: relative;    
+    margin: 0;
+  }
+  main section:nth-of-type(4) {
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    min-height: 55vh;         
   }
   main section:nth-of-type(4) img {
-    height: 65vh;
+    width: 100%;
+    height: auto;           
     object-fit: cover;
   }
-}
+  /* Links */
+  main section:nth-of-type(4) a {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    background: var(--color-button-bg);
+    color: var(--color-button-text);
+    padding: 0.75rem 2rem;
+    border-radius: 9999px; 
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  main section:nth-of-type(4) a:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+  /* =========================================================
+     Desktop (>= 1024px)
+     ========================================================= */
+  @media (min-width: 1024px) {
+    main section:nth-of-type(4) ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: visible;     
+      scroll-snap-type: none; 
+    }
+    main section:nth-of-type(4) li {
+      flex: none;
+    }
+    main section:nth-of-type(4) img {
+      height: 65vh;
+      object-fit: cover;
+    }
+  }
+  
 
 
-/* Section 5 (Bestsellers) */
+
+
+
+
+/* =========================================================
+   SECTION 5 – BESTSELLERS
+   ========================================================= */
 main section:nth-of-type(5) {
   background: var(--color-light-gray);
   padding: 2rem 0;
@@ -445,8 +515,11 @@ main section:nth-of-type(5) figcaption small {
   display: block;
   font-size: 1rem;
   font-weight: 300;
-  color: #444;
+  color: var(--color-black);
 }
+/* =========================================================
+     Desktop (>= 768px)
+     ========================================================= */
 @media (min-width: 768px) {
   main section:nth-of-type(5) ul {
     display: grid;
@@ -460,12 +533,20 @@ main section:nth-of-type(5) figcaption small {
 }
 
 
-/* Section 6 */
+
+
+
+
+/* =========================================================
+   SECTION 6
+   ========================================================= */
 main section:nth-of-type(6) {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
+/* Artikelen binnen section 6 */
 main section:nth-of-type(6) article {
   flex: 1;
   min-height: 50vh;
@@ -480,12 +561,14 @@ main section:nth-of-type(6) article {
   gap: 0.5rem;
   text-align: left;
 }
+/* Achtergrondafbeeldingen */
 main section:nth-of-type(6) article:first-of-type {
   background-image: url("../afbeeldingen/vrouwbril3.png");
 }
 main section:nth-of-type(6) article:last-of-type {
   background-image: url("../afbeeldingen/hoekwinkel.jpeg");
 }
+/* Links */
 main section:nth-of-type(6) a {
   display: inline-block;
   background: var(--color-button-bg);
@@ -503,6 +586,9 @@ main section:nth-of-type(6) a:hover {
   background: var(--color-black);
   color: var(--color-white);
 }
+/* =========================================================
+     Desktop (>= 768px)
+     ========================================================= */
 @media (min-width: 768px) {
   main section:nth-of-type(6) {
     flex-direction: row;
@@ -516,12 +602,19 @@ main section:nth-of-type(6) a:hover {
 }
 
 
-/* Section 7 */
+
+
+
+
+/* =========================================================
+   SECTION 7 – INSCHRIJFFORMULIER
+   ========================================================= */
 main section:nth-of-type(7) {
   background: #eae2dc;
   color: var(--color-black);
   padding: 2rem 1rem;
 }
+/* h2 */
 main section:nth-of-type(7) h2 {
   font-family: var(--font-serif);
   font-size: 1.8rem;
@@ -529,6 +622,7 @@ main section:nth-of-type(7) h2 {
   line-height: 1.3;
   text-align: left;
 }
+/* Formulier */
 main section:nth-of-type(7) form {
   display: flex;
   flex-direction: column;
@@ -541,6 +635,7 @@ main section:nth-of-type(7) input[type="email"] {
   border-radius: 0.4rem;
   width: 100%;
 }
+/* Checkbox + label */
 main section:nth-of-type(7) fieldset {
   border: none;
   padding: 0;
@@ -555,9 +650,13 @@ main section:nth-of-type(7) fieldset input[type="checkbox"] {
   height: 1rem;
   margin-top: 0.2rem;
 }
+/* Verstuur-knop */
 main section:nth-of-type(7) input[type="submit"] {
   align-self: flex-start;
 }
+/* =========================================================
+     Desktop (>= 768px)
+     ========================================================= */
 @media (min-width: 768px) {
   main section:nth-of-type(7) {
     padding: 3rem 4rem;
@@ -572,115 +671,134 @@ main section:nth-of-type(7) input[type="submit"] {
 }
 
 
-footer {
-  background: #000;
-  color: #fff;
-  padding: 2rem 1rem;
-  font-size: 0.95rem;
-}
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-footer img[alt="WhatsApp"],
-footer img[alt="Locatie"] {
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
-footer section:first-of-type h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-footer section:first-of-type nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-footer section:last-of-type {
-  margin-top: 2rem;
-  border-top: 1px solid #333;
-  padding-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-footer section:last-of-type aside {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-footer section:last-of-type ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 0;
-}
-footer address {
-  font-style: normal;
-  font-size: 0.9rem;
-}
-footer img[alt*="Certified"] {
-  max-width: 100px;
-  height: auto;
-}
-footer section:last-of-type figure {
-  text-align: center;
-}
-footer section:last-of-type figure img {
-  max-width: 160px;
-  height: auto;
-}
-@media (min-width: 768px) {
+
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+   footer {
+    background: #000;
+    color: #fff;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+  }
+  /* Links */
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  /* Kleine iconen (WhatsApp & Locatie) */
+  footer img[alt="WhatsApp"],
+  footer img[alt="Locatie"] {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+  /* Eerste sectie (navigatieblok) */
+  footer section:first-of-type h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
   footer section:first-of-type nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  /* Tweede sectie (onderste gedeelte) */
+  footer section:last-of-type {
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
   }
-  footer section:last-of-type {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
   footer section:last-of-type aside {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    width: 100%;
-  }
-  footer section:last-of-type ul {
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
   }
-  footer section:last-of-type figure img {
-    max-width: 220px; 
+  footer section:last-of-type ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  footer address {
+    font-style: normal;
+    font-size: 0.9rem;
+  }
+  footer img[alt*="Certified"] {
+    max-width: 100px;
     height: auto;
   }
-}
-
-/* Niet horzontaal scrollen */
-html, body {
-  overflow-x: hidden;
-}
-
-
-/* Quick nav verbergen op desktop */
-@media (min-width: 1024px) {
-  .quick-nav {
-    display: none;
+  footer section:last-of-type figure {
+    text-align: center;
   }
-  .header-icons {
-    display: none; 
+  footer section:last-of-type figure img {
+    max-width: 160px;
+    height: auto;
   }
-}
+  /* =========================================================
+     RESPONSIVE FOOTER (>= 768px)
+     ========================================================= */
+  @media (min-width: 768px) {
+    /* Navigatie horizontaal */
+    footer section:first-of-type nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+  
+    /* Onderdelen naast elkaar */
+    footer section:last-of-type {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    footer section:last-of-type aside {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      width: 100%;
+    }
+    footer section:last-of-type ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    footer section:last-of-type figure img {
+      max-width: 220px; 
+      height: auto;
+    }
+  }
+  
+  
+  
+
+  
+  /* anti horizontaal scrollen */
+  html, body {
+    overflow-x: hidden;
+  }
+  /* Quick-nav en header-iconen verbergen op desktop */
+  @media (min-width: 1024px) {
+    .quick-nav {
+      display: none;
+    }
+    .header-icons {
+      display: none; 
+    }
+  }

@@ -1,79 +1,68 @@
-/* Hamburgermenu styling */
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-white); 
-  padding: 2rem 1.5rem;
-  gap: 1.5rem;
-  z-index: 2000; 
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-/* Geopend */
-.main-nav.open {
-  transform: translateX(0);
-}
-
-
-/* Sluit-Button */
-.close-menu {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  align-self: flex-start; 
-  margin-bottom: 2rem;
-}
-
-
-/* Main-nav ul styling */
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  padding: 0;
-}
-
-
-/* Main-nav ul links styling */
-.main-nav a {
-  text-decoration: none;
-  color: var(--color-black);
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-
-/* Bovenste menu styling */
-.main-nav .menu-top a {
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-
-/* Onderste menu styling */
-.main-nav .menu-bottom a {
-  font-weight: 400;
-  font-size: 1.1rem;
-}
-
-
-/* Logo onderaan */
-.menu-logo {
-  margin-top: auto;
-  padding-top: 2rem;
-}
-
-
-/* Logo formaat */
-.menu-logo img {
-  height: 40px;
-}
+  /* Hamburgermenu container */
+   nav[aria-label="Uitklapmenu"] {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    z-index: 2001;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+  nav[aria-label="Uitklapmenu"][data-open="true"] {
+    transform: translateX(0);
+  }
+  
+  /* Sluitknop */
+  nav[aria-label="Uitklapmenu"] > button[aria-label="Sluit menu"] {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  /* Menu lijsten */
+  nav[aria-label="Uitklapmenu"] ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 0 2rem 0;
+    padding: 0;
+  }
+  nav[aria-label="Uitklapmenu"] a {
+    text-decoration: none;
+    color: var(--color-black);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  /* Bovenste list dikgedrukt */
+  nav[aria-label="Uitklapmenu"] ul:first-of-type a {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  /* Logo onderaan */
+  nav[aria-label="Uitklapmenu"] > a {
+    margin-top: auto;
+    padding-top: 2rem;
+  }
+  nav[aria-label="Uitklapmenu"] > a img {
+    height: 40px;
+    display: block;
+  }
+  
+  /* Desktop: menu helemaal uit */
+  @media (min-width: 1024px) {
+    nav[aria-label="Uitklapmenu"] {
+      display: none;
+    }
+  }
+  
