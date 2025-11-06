@@ -1,20 +1,22 @@
-/* Fonts */
+/* =========================================================
+   FONTS
+========================================================= */
 @font-face {
   font-family: "AceTate";
   src: url("../fonts/AmperSans-Light.woff2") format("woff2");
-  font-weight: 200; 
+  font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "AceTate";
   src: url("../fonts/AmperSans-Regular.woff2") format("woff2");
-  font-weight: 400; 
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "AceTate";
   src: url("../fonts/AmperSans-Medium.woff2") format("woff2");
-  font-weight: 500; 
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -25,6 +27,9 @@
 }
 
 
+/* =========================================================
+   ROOT VARIABELEN
+========================================================= */
 :root {
   /* Kleuren */
   --color-white: #ffffff;
@@ -32,15 +37,24 @@
   --color-light-gray: #f0f0f0;
   --color-off-white: #fefefe;
   --color-text: #000000;
-  /* Links */
+
+  /* Buttons */
   --color-button-bg: #ffffff;
   --color-button-text: #000000;
+
   /* Fonts */
   --font-base: "AceTate", Arial, sans-serif;
   --font-serif: "ArizonaSerif", serif;
+
+  /* Hoogte header voor margin-top main */
+  --header-height: 72px;
 }
 
-/* Light/Dark mode https://www.youtube.com/watch?v=GUSUA72t7p0*/
+
+/* =========================================================
+   LIGHT / DARK MODE
+   Bron: https://www.youtube.com/watch?v=GUSUA72t7p0 & Uitleg tijdens feedback
+========================================================= */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-white: #000000;
@@ -52,32 +66,18 @@
     --color-button-bg: #000000;
     --color-button-text: #ffffff;
   }
-}
-/* Light theme */
-:root[data-theme="light"] {
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-light-gray: #f0f0f0;
-  --color-off-white: #fefefe;
-  --color-text: #000000;
 
-  --color-button-bg: #ffffff;
-  --color-button-text: #000000;
-}
-/* Dark theme */
-:root[data-theme="dark"] {
-  --color-white: #000000;
-  --color-black: #ffffff;
-  --color-light-gray: #1a1a1a;
-  --color-off-white: #111111;
-  --color-text: #ffffff;
-
-  --color-button-bg: #000000;
-  --color-button-text: #ffffff;
+  /* Logo en iconen inverteren in dark mode */
+  header svg path,
+  header img {
+    filter: invert(1);
+  }
 }
 
 
-/* Reset */
+/* =========================================================
+   CONTAINER
+========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -85,7 +85,9 @@
 }
 
 
-/* Typografie */
+/* =========================================================
+   TYPOGRAFIE
+========================================================= */
 body {
   font-family: var(--font-base);
   font-weight: 400;
@@ -94,47 +96,30 @@ body {
   background: var(--color-white);
   overflow-x: hidden;
 }
-h1 {
-  font-family: var(--font-base);
-  font-weight: 500; 
-}
-h2 {
-  font-family: var(--font-base);
-  font-weight: 400; 
-}
-h3, h4 {
-  font-family: var(--font-base);
-  font-weight: 200; 
-}
-p, li {
-  font-family: var(--font-base);
-  font-weight: 200; 
-}
-blockquote, em {
-  font-family: var(--font-serif);
-}
+h1 { font-weight: 500; }
+h2 { font-weight: 400; }
+h3, h4 { font-weight: 200; }
+p, li { font-weight: 200; }
+blockquote, em { font-family: var(--font-serif); }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
+/* Klein tekstelement */
 small {
-  font-family: var(--font-base);
-  font-weight: 200;
   font-size: 0.85rem;
+  font-weight: 200;
   color: #555;
 }
 
-/* Navigatie Header */
-.main-nav a {
-  font-size: 0.85rem;
-  font-weight: 400;
-  white-space: nowrap;
-}
 
-/* Links */
+/* =========================================================
+   BUTTONS
+========================================================= */
 button,
 input[type="submit"] {
-  display: inline-block;
   background: var(--color-button-bg);
   color: var(--color-button-text);
   border: none;
@@ -142,10 +127,11 @@ input[type="submit"] {
   font-family: var(--font-base);
   font-weight: 500;
   cursor: pointer;
-  border-radius: 9999px; 
+  border-radius: 9999px;
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
+
 button:hover,
 input[type="submit"]:hover {
   background: var(--color-black);
@@ -153,3 +139,399 @@ input[type="submit"]:hover {
 }
 
 
+
+
+/* =========================================================
+   HEADER 
+========================================================= */
+header {
+  background: var(--color-white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+
+  /* Voorkomt dat fixed menu meebeweegt met header transform */
+  transform-style: flat;
+}
+
+/* Header zichtbaar / verborgen bij scroll */
+header.show { transform: translateY(0); }
+header.hide { transform: translateY(-100%); }
+
+/* Ruimte voor de vaste header */
+main {
+  margin-top: var(--header-height);
+}
+
+
+/* =========================================================
+   PROMO-BALK BOVENIN HEADER
+========================================================= */
+header > p {
+  background: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 0.3rem;
+}
+header > p a {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+  
+/* =========================================================
+   HOOFDHEADER (Logo, hamburgerknop, icons)
+========================================================= */
+header > section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid #eee;
+  min-height: calc(var(--header-height) - 1px);
+}
+
+/* Hamburgerknop (mobiel) */
+header > section > button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Logo in header */
+header > section > a:first-of-type img {
+  height: 24px;
+}
+
+/* Desktop navigatie verbergen op mobiel */
+header > section > nav {
+  display: none;
+}
+
+/* Iconen rechts (mobiel) */
+header > section > ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+header > section > ul img {
+  height: 20px;
+}
+
+/* =========================================================
+   QUICK-NAV (Mobiel – Brillen / Zonnebrillen / Winkels)
+========================================================= */
+header > nav:first-of-type {
+  border-bottom: 1px solid #eee;
+  background: var(--color-white);
+}
+header > nav:first-of-type ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.8rem 1rem;
+}
+header > nav:first-of-type li {
+  flex: 1;
+  text-align: center;
+}
+header > nav:first-of-type a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+/* =========================================================
+   HAMBURGERMENU (Uitklapmenu binnen header)
+========================================================= */
+header > nav:last-of-type {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-white);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 3000; /* boven header & content */
+}
+
+/* Paneel openen */
+header > nav:last-of-type[data-open="true"] {
+  transform: translateX(0);
+}
+
+/* Sluitknop (X) */
+header > nav:last-of-type > button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* Menu lijsten in hamburgermenu */
+header > nav:last-of-type ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+header > nav:last-of-type ul:first-of-type a {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+header > nav:last-of-type a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+/* Logo onderin hamburgermenu */
+header > nav:last-of-type > a img {
+  height: 40px;
+  margin-top: auto;
+}
+
+/* =========================================================
+   MENU OPEN – Header verandert om doorschijnen te voorkomen
+========================================================= */
+header.menu-open {
+  transform: none !important; /* header niet omhoog schuiven */
+  height: 100vh;              /* header wordt 100% schermhoogte */
+}
+
+/* =========================================================
+   DESKTOP WEERGAVE 
+========================================================= */
+@media (min-width: 1024px) {
+  /* Verberg mobiele elementen */
+  header > section > button,
+  header > section > ul,
+  header > nav:first-of-type,
+  header > nav:last-of-type {
+    display: none;
+  }
+
+  /* Ruimere layout */
+  header > section {
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+
+  /* Logo links blijft op plek */
+  header > section > a:first-of-type {
+    order: 0;
+    margin-right: 2rem;
+  }
+
+  /* Eerste nav (links) tonen */
+  header > section > nav:first-of-type {
+    display: block;
+    order: 1;
+  }
+  header > section > nav:first-of-type ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  /* Tweede nav (rechts) tonen */
+  header > section > nav:nth-of-type(2) {
+    display: block;
+    order: 2;
+    margin-left: auto;
+  }
+  header > section > nav:nth-of-type(2) ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  /* Linkstijl */
+  header > section > nav a {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  header > section > nav img {
+    height: 20px;
+  }
+}
+
+/* =========================================================
+   HAMBURGERMENU – OPEN STATE FIX
+   Zorgt ervoor dat de header niet omhoog schuift zodra
+   het menu open is, en dat het volledig wit blijft.
+========================================================= */
+
+/* Wanneer het menu open is, mag de header niet meer weg-translaten
+   en moet hij net zo groot zijn als het scherm (100vh) zodat
+   het mobiele menu alles bedekt. */
+   header.menu-open {
+    transform: none !important;
+    height: 100vh;
+  }
+  
+  /* Paneel blijft boven alles staan en heeft een 100% witte achtergrond */
+  header > nav:last-of-type {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-white);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 3000; /* boven de header en content */
+  }
+  
+  /* Zodra menu open is naar binnen schuiven */
+  header > nav:last-of-type[data-open="true"] {
+    transform: translateX(0);
+  }
+
+
+
+
+/* =========================================================
+   FOOTER ALGEMEEN
+========================================================= */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Footer links */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* WhatsApp & locatie-icoon */
+footer img[alt="WhatsApp"],
+footer img[alt="Locatie"] {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Eerste sectie in footer */
+footer section:first-of-type h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+footer section:first-of-type nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Tweede sectie (onderste blok) */
+footer section:last-of-type {
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Blok met links, logo en landselectie */
+footer section:last-of-type aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer section:last-of-type ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Adresblok */
+footer address {
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+/* B-Corp logo */
+footer img[alt*="Certified"] {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Footer logo onderaan */
+footer section:last-of-type figure {
+  text-align: center;
+}
+footer section:last-of-type figure img {
+  max-width: 160px;
+  height: auto;
+}
+
+/* =========================================================
+   RESPONSIVE FOOTER
+========================================================= */
+@media (min-width: 768px) {
+  /* Eerste footer-navigatie naast elkaar */
+  footer section:first-of-type nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  /* Onderdelen in tweede deel naast elkaar */
+  footer section:last-of-type {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  /* Links, icoon en adres naast elkaar */
+  footer section:last-of-type aside {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  /* Links naast elkaar */
+  footer section:last-of-type ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Groot logo */
+  footer section:last-of-type figure img {
+    max-width: 220px;
+    height: auto;
+  }
+}

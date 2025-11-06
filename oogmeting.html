@@ -6,26 +6,29 @@
   <title>Ace & Tate</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/oogmeting.css">
-  <link rel="stylesheet" href="css/hamburger.css">
-  <script src="js/script.js" defer></script>
 </head>
 <body>
 
+  <!-- =============================== -->
+  <!-- HEADER                          -->
+  <!-- =============================== -->
   <header>
-    <!-- Promo-bar -->
+    <!-- Promo-balk -->
     <p>
       <a href="#">Koop een multifocale bril, krijg tweede montuur gratis</a>
     </p>
+    <!-- Hoofdheader -->
     <section>
-      <!-- Hamburgermenu button -->
-      <button aria-label="Open menu">
-        <img src="svg/hamburgermenu.svg" alt="Menu">
+      <!-- Hamburgerknop -->
+      <button>
+        <img src="svg/hamburgermenu.svg" alt="Uitklapmenu">
       </button>
+      <!-- Logo -->
       <a href="/">
-        <img src="svg/logoheader.svg" alt="Ace & Tate logo">
+        <img src="svg/logoheader.svg" alt="Logo Ace & Tate">
       </a>
-      <!-- Navigatie links -->
-      <nav aria-label="Hoofdmenu links">
+      <!-- Navigatie links (desktop) -->
+      <nav>
         <ul>
           <li><a href="#">Brillen</a></li>
           <li><a href="#">Zonnebrillen</a></li>
@@ -34,10 +37,10 @@
           <li><a href="#">Oogzorg</a></li>
         </ul>
       </nav>
-      <!-- Navigatie rechts -->
-      <nav aria-label="Hoofdmenu rechts">
+      <!-- Navigatie rechts (desktop) -->
+      <nav>
         <ul>
-          <li><a href="#">Gratis oogmeting</a></li>
+          <li><a href="oogmeting.html">Gratis oogmeting</a></li>
           <li><a href="#">Winkels</a></li>
           <li><a href="#">Inloggen</a></li>
           <li><a href="#"><img src="svg/vergrootglas.svg" alt="Zoeken"></a></li>
@@ -45,7 +48,7 @@
           <li><a href="#"><img src="svg/winkeltas.svg" alt="Winkelmandje"></a></li>
         </ul>
       </nav>
-      <!-- Iconen apart -->
+      <!-- Iconen (mobiel) -->
       <ul>
         <li><a href="#"><img src="svg/vergrootglas.svg" alt="Zoeken"></a></li>
         <li><a href="#"><img src="svg/hartje.svg" alt="Wishlist"></a></li>
@@ -53,89 +56,103 @@
         <li><a href="#"><img src="svg/winkeltas.svg" alt="Winkelmandje"></a></li>
       </ul>
     </section>
-    <!-- Quick nav onder header (mobile) -->
-    <nav aria-label="Snelle navigatie">
+    <!-- Quick-nav (mobiel) -->
+    <nav>
       <ul>
         <li><a href="#">Brillen</a></li>
         <li><a href="#">Zonnebrillen</a></li>
         <li><a href="#">Winkels</a></li>
       </ul>
     </nav>
-  </header>
-  <!-- Hamburgermenu -->
-  <nav aria-label="Uitklapmenu" hidden>
-    <button aria-label="Sluit menu">&times;</button>
-    <ul>
-      <li><a href="#">Brillen</a></li>
-      <li><a href="#">Zonnebrillen</a></li>
-      <li><a href="#">Accessoires</a></li>
-      <li><a href="#">Service</a></li>
-      <li><a href="#">Oogzorg</a></li>
-    </ul>
-    <ul>
-      <li><a href="#">Gratis oogmeting</a></li>
-      <li><a href="#">Winkels</a></li>
-      <li><a href="#">Mijn account</a></li>
-      <li><a href="#">Contact opnemen</a></li>
-    </ul>
+    <!-- Hamburgermenu (mobiel) -->
+    <nav hidden>
+      <button>&times;</button>
+      <ul>
+        <li><a href="#">Brillen</a></li>
+        <li><a href="#">Zonnebrillen</a></li>
+        <li><a href="#">Accessoires</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Oogzorg</a></li>
+      </ul>
+      <ul>
+        <li><a href="oogmeting.html">Gratis oogmeting</a></li>
+        <li><a href="#">Winkels</a></li>
+        <li><a href="#">Mijn account</a></li>
+        <li><a href="#">Contact opnemen</a></li>
+      </ul>
       <a href="/">
-        <img src="svg/hamburgermenulogo.svg" alt="& logo">
+        <img src="svg/hamburgermenulogo.svg" alt="Logo Ace & Tate">
       </a>
-  </nav>
-  
+    </nav>
+  </header>
+
+    <!-- De header had ik eerst opgebouwd met classes, na feedback veranderd. Vervolgens met aria-label, ook na
+   feedback veranderd, daarna opgebouwd met alleen vanilla html en nth-of-type. Ik heb de header wel opgebouwd 
+   met aparte nav's waar bepaalde a's wel dubbel voorkomen in verschillende nav's. Het lukte mij namelijk niet om 1 zelfde 
+   a te hebben die in een icoon veranderd en ook apart in het hamburgermenu staat zonder dat de opmaak veranderd -->
+
+
+  <!-- ========================================== -->
+  <!-- MAIN CONTENT                               -->
+  <!-- ========================================== -->
   <main>
-    <!-- Section 1 -->
+
+    <!-- Section 1 Intro tekst -->
     <section>
       <h1>Services om je nieuwe bril te vinden</h1>
-      <p>Een nieuwe bril vinden kan lastig zijn - onze gratis services maken het gemakkelijk om de perfecte bril te vinden.</p>
+      <p>
+        Een nieuwe bril vinden kan lastig zijn - onze gratis services maken het gemakkelijk om de perfecte bril te vinden.
+      </p>
     </section>
 
-    <!-- Section 2 -->
-    <section aria-label="Gratis oogtest"> 
+    <!-- Section 2 Gratis oogtest -->
+    <section>
       <figure>
         <img src="afbeeldingen/oogtest-apparaat.jpg" alt="Oogmeting apparaat">
       </figure>
       <article>
         <h2>Boek een gratis oogtest</h2>
         <p>
-          Heb je problemen met je ogen? Of heb je ze al twee jaar (of langer) niet laten testen? 
-          Dan is een oogtest boeken de eerste stap. Je kunt in bijna elke Ace & Tate winkel terecht 
+          Heb je problemen met je ogen? Of heb je ze al twee jaar (of langer) niet laten testen?
+          Dan is een oogtest boeken de eerste stap. Je kunt in bijna elke Ace & Tate winkel terecht
           voor een gratis oogtest.
         </p>
         <a href="#">Boek een oogmeting</a>
       </article>
     </section>
-    <!-- Section 3 -->
-    <section aria-label="Pupilafstand meten"> 
+
+    <!-- Section 3 Pupilafstand meten -->
+    <section>
       <figure>
         <img src="afbeeldingen/mozaiek-model.png" alt="Meneer met bril">
       </figure>
       <article>
         <h2>Meet je Pupilafstand</h2>
         <p>
-          Onze online tool meet de afstand tussen je pupillen (“PD”) in minder dan 
-          twee minuten. We sturen je een link zodra je je bril hebt besteld.
+          Onze online tool meet de afstand tussen je pupillen (“PD”) in minder dan twee minuten.
+          We sturen je een link zodra je je bril hebt besteld.
         </p>
         <a href="#">Lees verder</a>
-       </article>
+      </article>
     </section>
-    <!-- Section 4 -->
-    <section aria-label="Bril maten gids"> 
+
+    <!-- Section 4 Brilmaten gids -->
+    <section>
       <figure>
         <img src="afbeeldingen/mozaiek-brillen.jpg" alt="Afbeelding van brillen">
       </figure>
       <article>
         <h2>Gids voor onze bril maten</h2>
         <p>
-          Hoe je het ook wendt of keert — er is een montuur voor elk gezicht. 
+          Hoe je het ook wendt of keert — er is een montuur voor elk gezicht.
           Kom erachter welke maat de juiste is voor jou.
         </p>
         <a href="#">Shop jouw maat</a>
       </article>
     </section>
 
-    <!-- Section 5 https://www.w3schools.com/html/html_forms.asp?utm_ & https://www.w3schools.com/tags/att_input_type_email.asp?utm_-->
-    <section aria-label="Nieuwsbrief">
+    <!-- Section 5 Formulier -->
+    <section>
       <h2>Meld je aan voor onze nieuwsbrief voor de laatste Ace & Tate updates.</h2>
       <form>
         <label for="email">E-mailadres</label>
@@ -153,13 +170,18 @@
     </section>
   </main>
 
-  <!-- Footer -->
+    <!-- Voor het opbouwen van het formulier met oa de checkbox en input voor een emailadress 
+   heb ik gebruikt gemaakt van tutorials als https://www.youtube.com/watch?v=fNcJuPIZ2WE & https://www.youtube.com/watch?v=frAGrGN00OA -->
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
   <footer>
     <section>
       <h3>We staan voor je klaar</h3>
       <p>Ma – Vr, 9:00 – 17:00</p>
       <p><img src="svg/whatsappwit.svg" alt="WhatsApp"> +31 97010240634</p>
-      <nav aria-label="Hoofdmenu footer">
+      <nav>
         <ul>
           <li><a href="#">Brillen</a></li>
           <li><a href="#">Zonnebrillen</a></li>
@@ -191,7 +213,10 @@
           <li><a href="#">Compliance</a></li>
         </ul>
         <address>
-          <p><img src="svg/locatiewit.svg" alt="Locatie"> <a href="#">Nederland</a> <a href="#">Dutch</a></p>
+          <p>
+            <img src="svg/locatiewit.svg" alt="Locatie">
+            <a href="#">Nederland</a> <a href="#">Dutch</a>
+          </p>
         </address>
       </aside>
       <figure>
@@ -199,5 +224,6 @@
       </figure>
     </section>
   </footer>
+  <script src="js/script.js" defer></script>
 </body>
 </html>

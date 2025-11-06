@@ -1,90 +1,91 @@
-// ===============================
-// Selecties
-// ===============================
-const menuToggle = document.querySelector('header > section > button[aria-label="Open menu"]');
-const closeMenu  = document.querySelector('nav[aria-label="Uitklapmenu"] > button[aria-label="Sluit menu"]');
-const nav        = document.querySelector('nav[aria-label="Uitklapmenu"]');
+// ============================================================
+// HEADER EN HAMBURGERMENU
+// ============================================================
 
-// Openen hamburgermenu  
-if (menuToggle && nav) {
+// Selecties
+const header = document.querySelector('header');
+const menuToggle = document.querySelector('header > section > button');         // Hamburgerknop
+const mobileMenu = document.querySelector('header > nav:last-of-type');         // Uitklapmenu
+const closeMenu = document.querySelector('header > nav:last-of-type > button'); // Sluitknop ("X")
+
+// Menu openen
+if (menuToggle && mobileMenu) {
   menuToggle.addEventListener('click', () => {
-    nav.setAttribute('data-open', 'true');
-    menuToggle.setAttribute('aria-expanded', 'true');
-  });
-} 
-// Sluiten hamburgermenu
-if (closeMenu && nav) {
-  closeMenu.addEventListener('click', () => {
-    nav.removeAttribute('data-open');
-    menuToggle?.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('data-open', 'true');
+    mobileMenu.removeAttribute('hidden');
+    header.classList.add('menu-open');
+    document.body.style.overflow = 'hidden'; // Voorkom scrollen bij geopend menu
   });
 }
-// Escape sneltoets hamburgermenu https://www.w3schools.com/jsref/event_onkeydown.asp
+
+// Menu sluiten via "X"
+if (closeMenu && mobileMenu) {
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.removeAttribute('data-open');
+    mobileMenu.setAttribute('hidden', '');
+    header.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  });
+}
+
+// Menu sluiten via Escape-toets
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && nav?.hasAttribute('data-open')) {
-    nav.removeAttribute('data-open');
-    menuToggle?.setAttribute('aria-expanded', 'false');
+  if (e.key === 'Escape' && mobileMenu?.hasAttribute('data-open')) {
+    mobileMenu.removeAttribute('data-open');
+    mobileMenu.setAttribute('hidden', '');
+    header.classList.remove('menu-open');
+    document.body.style.overflow = '';
   }
 });
 
 
-
-// ===============================
-// Header verstoppen bij scrollen "Bronvermelding: https://www.youtube.com/watch?v=lOgSy1k80tI"
-// ===============================
+// ============================================================
+// HEADER VERSTOPPEN / TONEN BIJ SCROLLEN
+// ============================================================
 let lastScroll = 0;
-const header = document.querySelector('header');
+
 if (header) {
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
+
+    // Als pagina bovenaan is — toon header altijd
     if (currentScroll <= 0) {
       header.classList.remove('hide');
       return;
     }
+
+    // Scrolt omlaag → verberg header
     if (currentScroll > lastScroll) {
-      // omlaag scrollen → verberg header
       header.classList.add('hide');
       header.classList.remove('show');
-    } else {
-      // omhoog scrollen → toon header
+    } 
+    // Scrolt omhoog → toon header
+    else {
       header.classList.add('show');
       header.classList.remove('hide');
     }
+
     lastScroll = currentScroll;
   });
 }
 
 
-
-// ===============================
-// Video afspelen/pauzeren link "Bronvermelding: https://www.youtube.com/watch?v=YheuzX6zmpg"
-// ===============================
-const playLink = document.getElementById("play-video");
-const video    = document.getElementById("hero-video");
+// ============================================================
+// VIDEO AFSPELEN / PAUZEREN
+// ============================================================
+const playLink = document.getElementById('play-video');
+const video = document.getElementById('hero-video');
 
 if (playLink && video) {
-  playLink.addEventListener("click", (e) => {
+  playLink.addEventListener('click', (e) => {
     e.preventDefault();
 
     if (video.paused) {
       video.play();
-      playLink.textContent = "Pauzeer video";
+      playLink.textContent = 'Pauzeer video';
     } else {
       video.pause();
-      playLink.textContent = "Speel video af";
+      playLink.textContent = 'Speel video af';
     }
   });
 }
-
-
-// ===============================
-// Verbergen hamburgermenu voor screenreader: https://www.youtube.com/watch?v=BU7iF5nEFCY
-// ===============================
-menuToggle.addEventListener('click', () => {
-  nav.removeAttribute('hidden'); 
-  nav.setAttribute('aria-hidden', 'false');
-});
-closeMenu.addEventListener('click', () => {
-  nav.setAttribute('hidden', '');
-  nav.setAttribute('aria-hidden', 'true');
-});

@@ -1,216 +1,38 @@
 /* =========================================================
-   HEADER ALGEMEEN & SCROLL ANIMATIE
-   ========================================================= */
-   header {
-    background: var(--color-white);
-    border-bottom: var(--color-white);
-    position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-  }
-  header.show { transform: translateY(0); }
-  header.hide { transform: translateY(-100%); }
-  :root { 
-    --header-height: 72px; 
-  }
-  main { 
-    margin-top: var(--header-height); 
-  }
-  
-  /* =========================================================
-     PROMO-BAR
-     ========================================================= */
-  header > p {
-    background: var(--color-black);
-    color: var(--color-white);
-    text-align: center;
-    font-size: 0.85rem;
-    padding: 0.3rem;
-    margin: 0;
-  }
-  header > p a {
-    color: var(--color-white);
-    text-decoration: underline;
-  }
-  
-  /* =========================================================
-     HOOFD-HEADER (eerste section in de header)
-     ========================================================= */
-  header > section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid #eee;
-    min-height: calc(var(--header-height) - 1px);
-    flex-wrap: nowrap;
-  }
-  /* Hamburgerknop (mobiel links) */
-  header > section > button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    order: 0;
-  }
-  /* Logo (altijd zichtbaar) */
-  header > section > a:first-of-type {
-    order: 1;
-    margin-left: 0.5rem;
-  }
-  header > section > a:first-of-type img {
-    height: 24px;
-    display: block;
-  }
-  /* Iconenlijst (mobiel rechts) */
-  header > section > ul {
-    order: 2;
-    margin-left: auto;
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-  }
-  header > section > ul img {
-    height: 20px;
-    display: block;
-  }
-  /* Navigatie standaard uit op mobiel */
-  header > section > nav {
-    display: none;
-  }
-  
-  /* =========================================================
-     QUICK NAV (tweede navigatiebalk onder header op kleinscherm)
-     ========================================================= */
-  header > nav:last-of-type {
-    border-bottom: 1px solid #eee;
-  }
-  header > nav:last-of-type ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0.8rem 1rem;
-  }
-  header > nav:last-of-type a {
-    color: var(--color-black);
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  
-  /* =========================================================
-     DESKTOP HEADER (>= 1024px)
-     ========================================================= */
-  @media (min-width: 1024px) {
-    /* Verbergt het hamburgermenu, de quick-nav en icons op desktop */
-    header > section > button,
-    header > nav:last-of-type,
-    header > section > ul {
-      display: none;
-    }
-    header > section {
-      gap: 2rem;
-      padding: 1rem 2rem;
-    }
-    /* Logo links plaatsen*/
-    header > section > a:first-of-type {
-      order: 0;
-      margin-right: 2rem;
-    }
-    /* Navigatie links */
-    header > section > nav:first-of-type {
-      order: 1;
-      display: block;
-    }
-    header > section > nav:first-of-type ul {
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    header > section > nav:first-of-type a {
-      color: var(--color-black);
-      font-size: 1rem;
-      font-weight: 500;
-    }
-    /* Navigatie rechts */
-    header > section > nav:last-of-type {
-      order: 2;
-      margin-left: auto;
-      display: block;
-    }
-    header > section > nav:last-of-type ul {
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      align-items: center;
-    }
-    header > section > nav:last-of-type li {
-      display: flex;
-      align-items: center;
-    }
-    header > section > nav:last-of-type a {
-      color: var(--color-black);
-      font-size: 1rem;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-    }
-    header > section > nav:last-of-type img {
-      height: 20px;
-      display: block;
-    }
-  }
-  
-  
-
-
-
-
-/* =========================================================
-   SECTION 1 
-   ========================================================= */
+   SECTION 1
+========================================================= */
 main > section:first-of-type {
   background: var(--color-black);
   color: var(--color-white);
   padding: 5rem 1.5rem;
   text-align: center;
 }
+
 main > section:first-of-type h1 {
-  font-family: var(--color-white);
+  font-family: var(--font-base);
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
+
 /* Paragraaf */
 main > section:first-of-type p {
-  max-width: 60ch;
+  max-width: 40rem;
   margin: 0 auto;
   font-size: 1rem;
   font-family: var(--font-base);
 }
-/* Responsive h1 grootte */
+
+/* Responsive h1 */
 @media (min-width: 1024px) {
-  main > section:first-of-type h1 { 
-    font-size: 3.5rem; 
+  main > section:first-of-type h1 {
+    font-size: 3.5rem;
   }
 }
 
 
-
-
-
-
-
 /* =========================================================
-   SECTIONS 2–4 – MOZAIËK BLOKKEN 
-   ========================================================= */
+   SECTIONS 2 tot 4
+========================================================= */
 main > section:nth-of-type(2),
 main > section:nth-of-type(3),
 main > section:nth-of-type(4) {
@@ -219,21 +41,23 @@ main > section:nth-of-type(4) {
   gap: 0;
   align-items: center;
 }
-/* Tekstdeel */
+
+/* Tekstgedeelte */
 main > section:nth-of-type(2) article,
 main > section:nth-of-type(3) article,
 main > section:nth-of-type(4) article {
   padding: 2rem 1.5rem;
 }
+
 /* Afbeeldingen */
 main > section:nth-of-type(2) figure img,
 main > section:nth-of-type(3) figure img,
 main > section:nth-of-type(4) figure img {
   width: 100%;
   height: auto;
-  display: block;
 }
-/* Koppen in de artikelen */
+
+/* Koppen */
 main > section:nth-of-type(2) h2,
 main > section:nth-of-type(3) h2,
 main > section:nth-of-type(4) h2 {
@@ -241,18 +65,19 @@ main > section:nth-of-type(4) h2 {
   font-size: 1.75rem;
   margin-bottom: 0.75rem;
 }
-/* Artikelen */
+
+/* Paragrafen */
 main > section:nth-of-type(2) p,
 main > section:nth-of-type(3) p,
 main > section:nth-of-type(4) p {
   margin-bottom: 1rem;
-  max-width: 50ch;
+  max-width: 30rem;
 }
-/* links */
+
+/* Links */
 main > section:nth-of-type(2) a,
 main > section:nth-of-type(3) a,
 main > section:nth-of-type(4) a {
-  display: inline-block;
   border: 1px solid var(--color-black);
   padding: 0.6rem 1.5rem;
   border-radius: 9999px;
@@ -260,231 +85,103 @@ main > section:nth-of-type(4) a {
   text-decoration: none;
   transition: all 0.2s;
 }
+
 main > section:nth-of-type(2) a:hover,
 main > section:nth-of-type(3) a:hover,
 main > section:nth-of-type(4) a:hover {
   background: var(--color-black);
   color: var(--color-white);
 }
-/* =========================================================
-   Breed scherm (>= 768px)
-   ========================================================= */
+
+/* Responsive (>= 768px) */
 @media (min-width: 768px) {
-  /* 2 kolommen naast elkaar */
   main > section:nth-of-type(2),
   main > section:nth-of-type(3),
   main > section:nth-of-type(4) {
     grid-template-columns: 1fr 1fr;
   }
-  /* Afwisselend patroon: */
+
+  /* Afwisselende layout in Section 3 */
   main > section:nth-of-type(3) {
-    direction: rtl; 
+    direction: rtl;
   }
   main > section:nth-of-type(3) article,
   main > section:nth-of-type(3) figure {
-    direction: ltr; 
+    direction: ltr;
   }
 }
 
-  
-
-
-
+/* Omdat de volgorde in deze drie sections op klein en groot formaat varieert heb ik hier grid gebruikt. Om dit goed te krijgen heb ik
+naast de oefeningen op DLO gebruik gemaakt van de volgende tutorials: https://medium.com/@axel/mosaic-layouts-with-css-grid-d13f4e3ed2ae
+https://www.youtube.com/watch?v=rg7Fvvl3taU, https://www.youtube.com/watch?v=0xMQfnTU6oo & https://www.youtube.com/watch?v=tFKrK4eAiUQ 
 
 
 /* =========================================================
-   SECTION 5 – INSCHRIJFFORMULIER
-   ========================================================= */
-   main section:nth-of-type(5) {
-    background: #eae2dc;
-    color: var(--color-black);
-    padding: 2rem 1rem;
+   SECTION 5 – NIEUWSBRIEF FORMULIER
+========================================================= */
+/* Section 5 container */
+main section:nth-of-type(5) {
+  background: #eae2dc;
+  color: var(--color-black);
+  padding: 2rem 1rem;
+}
+
+/* h2 */
+main section:nth-of-type(5) h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Formulier */
+main section:nth-of-type(5) form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main section:nth-of-type(5) input[type="email"] {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  width: 100%;
+}
+
+/* Checkbox en label */
+main section:nth-of-type(5) fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+main section:nth-of-type(5) fieldset input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2rem;
+}
+
+/* Verstuurknop */
+main section:nth-of-type(5) input[type="submit"] {
+  align-self: flex-start;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  main section:nth-of-type(5) {
+    padding: 3rem 4rem;
   }
-  /* h2 */
   main section:nth-of-type(5) h2 {
-    font-family: var(--font-serif);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-    text-align: left;
+    font-size: 2.5rem;
+    max-width: 60%;
   }
-  /* Formulier */
   main section:nth-of-type(5) form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    max-width: 60%;
   }
-  main section:nth-of-type(5) input[type="email"] {
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.4rem;
-    width: 100%;
-  }
-  /* Checkbox + label */
-  main section:nth-of-type(5) fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-  }
-  main section:nth-of-type(5) fieldset input[type="checkbox"] {
-    width: 1rem;
-    height: 1rem;
-    margin-top: 0.2rem;
-  }
-  /* Verstuur-knop */
-  main section:nth-of-type(5) input[type="submit"] {
-    align-self: flex-start;
-  }
-  /* =========================================================
-       Desktop (>= 768px)
-       ========================================================= */
-  @media (min-width: 768px) {
-    main section:nth-of-type(7) {
-      padding: 3rem 4rem;
-    }
-    main section:nth-of-type(7) h2 {
-      font-size: 2.5rem;
-      max-width: 60%;
-    }
-    main section:nth-of-type(7) form {
-      max-width: 60%;
-    }
-  }
-  
-  
-  
-  
-  
-  
-  /* =========================================================
-     FOOTER
-     ========================================================= */
-     footer {
-      background: #000;
-      color: #fff;
-      padding: 2rem 1rem;
-      font-size: 0.95rem;
-    }
-    /* Links */
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    /* Kleine iconen (WhatsApp & Locatie) */
-    footer img[alt="WhatsApp"],
-    footer img[alt="Locatie"] {
-      width: 1rem;
-      height: 1rem;
-      margin-right: 0.5rem;
-      vertical-align: middle;
-    }
-    /* Eerste sectie (navigatieblok) */
-    footer section:first-of-type h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    footer section:first-of-type nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    /* Tweede sectie (onderste gedeelte) */
-    footer section:last-of-type {
-      margin-top: 2rem;
-      border-top: 1px solid #333;
-      padding-top: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    footer section:last-of-type aside {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    footer section:last-of-type ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      padding: 0;
-      margin: 0;
-    }
-    footer address {
-      font-style: normal;
-      font-size: 0.9rem;
-    }
-    footer img[alt*="Certified"] {
-      max-width: 100px;
-      height: auto;
-    }
-    footer section:last-of-type figure {
-      text-align: center;
-    }
-    footer section:last-of-type figure img {
-      max-width: 160px;
-      height: auto;
-    }
-    /* =========================================================
-       RESPONSIVE FOOTER (>= 768px)
-       ========================================================= */
-    @media (min-width: 768px) {
-      /* Navigatie horizontaal */
-      footer section:first-of-type nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-      }
-    
-      /* Onderdelen naast elkaar */
-      footer section:last-of-type {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-      }
-      footer section:last-of-type aside {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        width: 100%;
-      }
-      footer section:last-of-type ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-      footer section:last-of-type figure img {
-        max-width: 220px; 
-        height: auto;
-      }
-    }
-    
-    
-    
-  
-    
-    /* anti horizontaal scrollen */
-    html, body {
-      overflow-x: hidden;
-    }
-    /* Quick-nav en header-iconen verbergen op desktop */
-    @media (min-width: 1024px) {
-      .quick-nav {
-        display: none;
-      }
-      .header-icons {
-        display: none; 
-      }
-    }
+}
