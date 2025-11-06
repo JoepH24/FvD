@@ -243,12 +243,31 @@ website zeker niet semantisch. Mijn code mag overichtelijker met duidelijke noti
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
+1. Hulp bij het maken van eeen hamburgermenu Ik heb hier hulp gebruikt naast de oefeningen op DLO van een aantal Youtube tutorials: 
+https://www.youtube.com/watch?v=0ik6X4DJKCc https://www.youtube.com/watch?v=y17RuWkWdn8 (Voor keydown) https://www.youtube.com/watch?v=rCqvTAKcWj4
 
-  1. bron 1
-  2. bron 2
-  3. ...
+2. Header show/hide, Ik heb hier hier hulp gebruikt een aantal Youtube tutorials: 
+https://www.youtube.com/watch?v=_IRSvzxmRj8 & https://www.youtube.com/watch?v=Q_XZk5Vnujw
+
+3. De Ace & Tate website had eerst geen video op de homepagina (hij is tussendoor geupdate)
+Tijdens feedbackgesprek 2 hoorde ik dat ik dit nog kan toevoegen
+hier hier hulp gebruikt een aantal Youtube tutorials: 
+https://www.youtube.com/watch?v=yx-HYerClEA & https://www.youtube.com/watch?v=yY6XnbWnK4o
+
+4. Voor het opbouwen van het formulier met oa de checkbox en input voor een emailadress 
+   heb ik gebruikt gemaakt van tutorials als https://www.youtube.com/watch?v=fNcJuPIZ2WE & https://www.youtube.com/watch?v=frAGrGN00OA
+
+5. De sliders heb ik opgebouwd met behulp van de volgende Tutorials:
+https://www.youtube.com/watch?v=IESoUbWJF48 & https://www.youtube.com/watch?v=ytl6TrroGis
+
+6. Voor snelle vragen wanneer ik ergens op vastliep gebruikte ik ChatGPT of of de Google AI zoekfunctie
+
+7. Gebruik van grid, (oogmeting) Omdat de volgorde in deze drie sections op klein en groot formaat varieert heb ik hier grid gebruikt. Om dit goed te krijgen heb ik
+naast de oefeningen op DLO gebruik gemaakt van de volgende tutorials: https://medium.com/@axel/mosaic-layouts-with-css-grid-d13f4e3ed2ae
+https://www.youtube.com/watch?v=rg7Fvvl3taU, https://www.youtube.com/watch?v=0xMQfnTU6oo & https://www.youtube.com/watch?v=tFKrK4eAiUQ
+
+8. Darkmode: https://www.youtube.com/watch?v=GUSUA72t7p0 & Uitleg tijdens feedback
+
+
 
 </details>
