@@ -200,21 +200,29 @@ De header en de footer horen in de gedeelde styles.css, zorg dat dit klopt
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+
+<img width="1259" height="696" alt="Scherm­afbeelding 2025-11-06 om 16 02 28" src="https://github.com/user-attachments/assets/4a54551f-e5ea-4feb-9526-288b4af9c4d5" />
+<img width="552" height="710" alt="Scherm­afbeelding 2025-11-06 om 16 02 12" src="https://github.com/user-attachments/assets/41cd6560-5bec-4b91-b091-86f71a769ff2" />
+<img width="726" height="382" alt="Scherm­afbeelding 2025-11-06 om 16 02 04" src="https://github.com/user-attachments/assets/95ddc07d-53b0-42ad-bbaf-405d3810b21c" />
+<img width="731" height="699" alt="Scherm­afbeelding 2025-11-06 om 16 01 45" src="https://github.com/user-attachments/assets/a372f718-7865-400c-8f41-764764c1b6db" />
+<img width="736" height="712" alt="Scherm­afbeelding 2025-11-06 om 16 01 33" src="https://github.com/user-attachments/assets/9c637faa-c74e-41db-9812-af8755bd8502" />
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+ Wat goed ging en wat ik heb geleerd is echt een hele hoop. De elementen die ik vroeger lastig vond
+ lijken na dit project niets meer, simpele dingen als de volgorde van (ul li a) dit waren vroeger termen
+ die ik als verwarrend ervaarde maar door zoveel bezig geweest te zijn kan je deze begrippen inmiddels dromen.
+ Ik vond het erg leuk om te leren hoe ik Darkmode toepaste en vooral het moment wanneer dit eindelijk lukte. 
+ Ik ben nog nooit zo veel an actief bezig geweest met coderen als de afgelopen maanden en heb nu een heel andere 
+ kijk op dit vak.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
-</details>
-
+Het opbouwen van de header was bij de Ace & Tate website niet makkelijk, ik wilde eigenlijk zorgen dat je bepaalde links 
+kon laten veranderen in iconen en op meerder locaties (zoals in het hamburgermenu) kon laten zien zonder deze in de code 
+de verdubbelen. Ik kwam hier helaas niet uit zonder dat de header veranderde van lay-out. 
 
 
 
