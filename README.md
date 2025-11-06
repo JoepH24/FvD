@@ -163,11 +163,16 @@ website zeker niet semantisch. Mijn code mag overichtelijker met duidelijke noti
 
 ## Toegankelijkheidstest 2/2 (week 4)
 
-<details>
-  <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
+![IMG_2786](https://github.com/user-attachments/assets/0f076262-1f4f-42ac-a9e4-2eaf65de6593)
+![IMG_2790](https://github.com/user-attachments/assets/d35a1259-92cb-499d-9023-f7a2a473c978)
+![IMG_2789](https://github.com/user-attachments/assets/6fd6778c-f2cd-4bea-abfd-a179b5604708)
+![IMG_2788](https://github.com/user-attachments/assets/24e3a2a9-773c-4744-bb96-5193c94cbe0b)
+![IMG_2787](https://github.com/user-attachments/assets/cf90d7da-38b6-419c-b860-80ab77165f1c)
+
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+
+  Alle afbeeldingen zijn nu voorzien van een alt, er is een darkmode toepasbaar de volgorde van de elementen is op orde en de a's staan in list's 
 
 </details>
 
