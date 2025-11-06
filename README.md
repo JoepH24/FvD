@@ -99,11 +99,6 @@ Responsive
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
@@ -134,11 +129,6 @@ Responsive
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
@@ -185,27 +175,18 @@ website zeker niet semantisch. Mijn code mag overichtelijker met duidelijke noti
 <details>
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
-  ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  
+De classes waren vervangen door aria-label... Dit is ook niet de bedoeling. 
+Verwijder de aria-labels naar simpele html. 
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+De Darkmode was nog niet toegepast
+op alle logo's en icons
+
+De Script.css stond bovenaan inplaats van onderaan de html
+
+De header en de footer horen in de gedeelde styles.css, zorg dat dit klopt
 
 </details>
 
